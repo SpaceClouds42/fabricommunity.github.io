@@ -19,4 +19,4 @@ jobs:
           java-version: 1.14
 
       - name: Build site
-        run: sh build.sh
+        run: sh ./build.sh
