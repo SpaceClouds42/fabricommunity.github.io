@@ -31,6 +31,20 @@ The site is divided into a number of sections, each with its own navigation. Sec
 in [the `site` folder](/site), aside from the `static` folder (which contains static assets). This helps to keep things
 organised, with different sets of documents kept separately from each other.
 
+The following [Markdown extensions](https://github.com/vsch/flexmark-java/wiki/Extensions) are enabled:
+
+* [Abbreviations](https://github.com/vsch/flexmark-java/wiki/Extensions#abbreviation)
+* [Anchor Links](https://github.com/vsch/flexmark-java/wiki/Extensions#anchorlink)
+* [Attributes](https://github.com/vsch/flexmark-java/wiki/Extensions#attributes)
+* [Autolink](https://github.com/vsch/flexmark-java/wiki/Extensions#autolink)
+* [Emoji](https://github.com/vsch/flexmark-java/wiki/Extensions#emoji) (`:emoji_name:`)
+* [Media Tags](https://github.com/vsch/flexmark-java/wiki/Extensions#media-tags)
+* [Strikethrough](https://github.com/vsch/flexmark-java/wiki/Extensions#gfm-strikethroughsubscript)
+* [Table of Contents](https://github.com/vsch/flexmark-java/wiki/Extensions#table-of-contents)
+* [Tables](https://github.com/vsch/flexmark-java/wiki/Extensions#tables)
+* [WikiLinks](https://github.com/vsch/flexmark-java/wiki/Extensions#wikilinks)
+* [YouTube Embedded Link Transformer](https://github.com/vsch/flexmark-java/wiki/Extensions#youtube-embedded-link-transformer)
+
 ### Front matter
 
 All Markdown files must start with a front matter block. Front matter blocks contain metadata about the current 
