@@ -1,5 +1,3 @@
-@ECHO off
-
 if [ ! -f SSG.jar ]; then
     sh ./download.sh
 fi

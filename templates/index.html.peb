@@ -4,6 +4,9 @@
     <title>{{ meta.title }}</title>
 
     <link rel="stylesheet" href="/static/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/css/prism.css">
+
+    <script async type="application/javascript" src="/static/js/prism.min.js"></script>
 </head>
 <body>
 {{ body | raw }}
