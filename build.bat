@@ -11,7 +11,7 @@ java -jar SSG.jar build^
     --template-path templates^
     --section doc
 
-xcopy site\static build\static /E/I
+xcopy site\static build\static /E/I/Q
 
 echo %cmdcmdline% | findstr /i /c:"%~nx0" >NUL 2>&1 && set standalone=1
 

@@ -148,9 +148,8 @@ following ways:
     * All images should be placed in `static/images`.
     * All JavaScript scripts should be placed in `static/js`.
 
-**Note:** Document-based templates (within files in the `site` folder) are currently unable to `include` other
-templates. If you think you have a solution for this, please raise an issue or open a pull request on
-[the static site generator repo](https://github.com/FabriCommunity/SSG).
+**Note:** Templates in the `site/` folder are temporarily written to `templates/TEMP.html.peb` during rendering. This
+allows them to reference other templates, as if they themselves were placed in the `templates/` folder.
 
 ### Templating
 
@@ -160,9 +159,9 @@ for re-use of HTML, which helps to keep the repository clean and easy to underst
 The following variables are available to all Pebble templates, including in Markdown files:
 
 * `navigation` - a Navigation `Root` object, containing the `currentPath` string, and a variable number of `nodes`.
-  Nodes are `Node` objects, which contain `path` and `title` properties, and optionally may themselves contain
-  `children` (which are also `Node` objects). If a section (or the site root) doesn't have a `navigation.yml`, then
-  `nodes` will be an empty list.
+  Nodes are `Node` objects, which contain `path` and `title` properties, and optionally may themselves contain a
+  nullable `description` property, or their own `children` (which are also `Node` objects). If a section (or the site 
+  root) doesn't have a `navigation.yml`, then `nodes` will be an empty list.
 
 The following variables are available to Pebble templates within the `templates` folder only:
 

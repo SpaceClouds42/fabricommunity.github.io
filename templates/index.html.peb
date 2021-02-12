@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ meta.title }}</title>
+{% extends './base.html.peb' %}
 
-    <link rel="stylesheet" href="/static/css/bulma.min.css">
-    <link rel="stylesheet" href="/static/css/prism.css">
-
-    <script async type="application/javascript" src="/static/js/prism.min.js"></script>
-</head>
-<body class="line-numbers">
-{{ body | raw }}
-</body>
-</html>
+{% block main %}
+    {% block content %}
+        <main class="container">
+            <div class="content">
+                {{ body | raw }}
+            </div>
+        </main>
+    {% endblock %}
+{% endblock %}
