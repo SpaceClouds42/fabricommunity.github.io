@@ -92,9 +92,11 @@ nodes:
 
 Each node has the following properties:
 
-* **Required:** `title` - The name of the navigation node that's shown on the site
-* **Required:** `path` - The absolute path of the document this node should take you to when clicked
-* Optional: `children` - Other nodes that should be placed within this node
+* **Required:** `title` - The name of the navigation node that's shown on the site.
+* **Required:** `path` - The absolute path of the document this node should take you to when clicked. This may be the
+  path to a document, a static file (in `/static`), or a full URL (eg `https://google.com`). If you're referring to a
+  document in the current section, **you should always use an absolute path that matches the url**.
+* Optional: `children` - Other nodes that should be placed within this node.
 * Optional: `description` - A short description describing where this node points at. **Note:** This is not used 
   within section navigations, only in the site root.
 
