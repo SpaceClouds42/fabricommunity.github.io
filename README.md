@@ -16,10 +16,11 @@ The static site generator requires that you have Java 8 or later installed.
 
 * `build` - Build the site, generating a copy in the `build` folder.
 * `download` - Download (or update) the static site generator. This is run automatically by the `build` script if 
-  `SSG.jar` is not present.
-  
-**Note:** Currently, there is no simple way to view the generated site. A `serve` script will be provided for this
-purpose later on.
+  `SSG.jar` is not present. If the scripts aren't working, you'll probably need to delete `SSG.jar` or just run this
+  script yourself.
+* `serve` - Spin up a simple webserver on localhost to serve the site after you've built it. This will not build it
+  automatically - run the `build` script whenever you need to do that. Press `CTRL + C` at any point to stop the 
+  server.
 
 ## As a writer
 
