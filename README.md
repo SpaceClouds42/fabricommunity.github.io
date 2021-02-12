@@ -97,8 +97,8 @@ Each node has the following properties:
   path to a document, a static file (in `/static`), or a full URL (eg `https://google.com`). If you're referring to a
   document in the current section, **you should always use an absolute path that matches the url**.
 * Optional: `children` - Other nodes that should be placed within this node.
-* Optional: `description` - A short description describing where this node points at. **Note:** This is not used 
-  within section navigations, only in the site root.
+* Optional: `description` - A short description describing where this node points at. **Note:** This is not used within
+  section navigations, only in the site root.
 
 ### Conventions and tips
 
@@ -161,13 +161,14 @@ The following variables are available to all Pebble templates, including in Mark
 
 * `navigation` - a Navigation `Root` object, containing the `currentPath` string, and a variable number of `nodes`.
   Nodes are `Node` objects, which contain `path` and `title` properties, and optionally may themselves contain
-  `children` (which are also `Node` objects).
+  `children` (which are also `Node` objects). If a section (or the site root) doesn't have a `navigation.yml`, then
+  `nodes` will be an empty list.
 
 The following variables are available to Pebble templates within the `templates` folder only:
 
 * `body` - The HTML rendered from a Markdown document. If the current document was not a Markdown document, this will
-  be `null`. As a result, we recommend wrapping usages in a block named `content`, which may be replaced by other Pebble
-  templates.
+  explicitly be `null`. As a result, we recommend wrapping usages in a block named `content`, which may be replaced by
+  other Pebble templates.
 
 The following variables are available to Markdown document templates within the `site` folder only:
 
