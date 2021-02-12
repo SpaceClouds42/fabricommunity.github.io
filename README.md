@@ -147,9 +147,5 @@ The following variables are available to Markdown document templates within the 
 
 # Licensing
 
-* [Bulma](https://bulma.io) (the CSS framework) is licensed under the [MIT License](/LICENSE-BULMA).
-* [Prism](https://prismjs.com/) (the syntax hilighter) is licensed under the [MIT License](/LICENSE-PRISM).
-* All templates, HTML files and Markdown documents (aside from the code samples therein) are licensed under the
-  [Creative Commons BY-NC-SA License](/LICENSE-CC-BY-NC-SA.md).
-* All code samples in this repository (including scripts and code samples within other files) are licensed under the 
-  [Creative Commons Zero License](/LICENSE-CC0.md).
+This repository (and the site itself) is dual-licensed. For more information, please read 
+[the LICENSE.md file](/LICENSE.md).
