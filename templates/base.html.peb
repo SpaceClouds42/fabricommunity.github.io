@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Fabric Community | {% block title %}{% endblock %}</title>
 
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/static/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/css/bulma-divider.min.css">
     <link rel="stylesheet" href="/static/css/prism.css">
     <link rel="stylesheet" href="/static/css/core.css">
 
@@ -15,10 +16,10 @@
 
     {# Icons: Font Awesome Pro #}
     <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
+
+    {% block head %}{% endblock %}
 </head>
 <body class="line-numbers">
-{% block main %}
-
-{% endblock %}
+{% block main %}{% endblock %}
 </body>
 </html>

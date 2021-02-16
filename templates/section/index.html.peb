@@ -1,15 +1,26 @@
-    {% extends '../base.html.peb' %}
+{% extends '../base.html.peb' %}
 
-        {% block title %}{{ meta.title }}{% endblock %}
+{% block title %}{{ meta.title }}{% endblock %}
 
-    {% block main %}
+{% block head %}
+    {# Mobile sidebar JavaScript #}
+    <script async src="/static/js/sidebar.js" type="application/javascript"></script>
+{% endblock %}
+
+{% block main %}
+    <aside class="sidebar" id="sidebar">
         {% include "./sidebar.html.peb" %}
+    </aside>
 
-        {% block content %}
-        <main class="container column is-10">
-            <div class="content">
-                    {{ body | raw }}
-            </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    {% block content %}
+        <main class="has-sidebar">
+            {% include "./navbar.html.peb" %}
+
+            <section class="content section">
+                {{ body | raw }}
+            </section>
         </main>
-        {% endblock %}
     {% endblock %}
+{% endblock %}

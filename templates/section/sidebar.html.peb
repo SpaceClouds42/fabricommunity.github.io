@@ -1,15 +1,53 @@
-<aside class="sidebar column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
-    <p class="menu-label is-hidden-touch">Navigation</p>
-    <ul class="menu-list">
-        {% for node in navigation.nodes %}
-            {% if node.children == null %}
-                <li><a href="{{ node.path }}"><i class="{{ node.icon }}"></i> {{ node.title }}</a></li>
+<a class="menu-brand" href="/">
+    <img src="/static/images/logo.png" />
+</a>
+
+<p class="menu-label">
+    Navigation
+</p>
+
+<ul class="menu-list">
+    {% for node in navigation.nodes %}
+        {% if node.type == "node" %}
+            <li>
+                {% if node.children.size >= 1 %}
+                    <a class="{% if node.path == navigation.currentPath %}is-active{%endif%}" href="{{ node.path }}">
+                        <i class="{{ node.icon }}"></i> {{ node.title }}
+
+                        {% if navigation.currentPath.startsWith(node.path) %}
+                            <span class="is-pulled-right"><i class="fas fa-chevron-down"></i></span>
+                        {% else %}
+                            <span class="is-pulled-right"><i class="fas fa-chevron-right"></i></span>
+                        {% endif %}
+                    </a>
+
+                    {% if navigation.currentPath.startsWith(node.path) %}
+                        <ul>
+                            {% for subnode in node.children %}
+                                <li><a href="{{ subnode.path }}"><i class="{{ subnode.icon }}"></i> {{ subnode.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                {% else %}
+                    <a class="{% if node.path == navigation.currentPath %}is-active{%endif%}" href="{{ node.path }}"><i class="{{ node.icon }}"></i> {{ node.title }}</a>
+                {% endif %}
+            </li>
+        {% elseif node.type == "spacer" %}
+            </ul>
+
+            {% if node.title != null %}
+                <p class="menu-label">
+                    {{ node.title }}
+                </p>
             {% else %}
-                {# TODO: Render children #}
-                <li><a href="{{ node.path }}">{{ node.title }}</a></li>
+                <div class="divider"></div>
             {% endif %}
-        {% else %}
-            <p> There are no articles. </p>
-        {% endfor %}
-    </ul>
-</aside>
+
+            <ul class="menu-list">
+        {% endif %}
+    {% else %}
+        <p> There are no articles. </p>
+    {% endfor %}
+</ul>
+

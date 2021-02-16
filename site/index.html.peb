@@ -1,8 +1,8 @@
-    {% extends './base.html.peb' %}
+{% extends './base.html.peb' %}
 
-        {% block title %}Home{% endblock %}
+{% block title %}Home{% endblock %}
 
-    {% block main %}
+{% block main %}
     <section class="hero">
         <div class="hero-body has-text-centered">
             <img src="/static/images/logo.png" class="index-icon"/>
@@ -58,5 +58,6 @@
             </div>
         </section>
     </main>
+
     {% include './footer.html.peb' %}
-    {% endblock %}
+{% endblock %}
