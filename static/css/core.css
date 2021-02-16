@@ -1,28 +1,147 @@
-/**
-    Main logo found on index.html.peb
-**/
+/** Index page logo **/
+
 .index-icon {
     width: 125px;
     height: auto;
     image-rendering: pixelated;
 }
 
-/**
-    Footer Related
-**/
+/** Footer **/
 .footer-padder-s {
     margin-bottom: 5px;
 }
 
-/**
-    Sidebar Related
-**/
-@media screen and (max-width: 768px) {
-    #menu-toggle:checked + .nav-menu {
-        display: block;
+/** Sidebar **/
+.sidebar {
+    background-color: hsl(0, 0%, 96%);
+    min-height: 100vh;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    transition: left 0.2s linear;
+    width: 18rem;
+
+    z-index: 32;
+}
+
+.sidebar-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.has-sidebar {
+    transition: filter 0.2s linear;
+}
+
+@media(min-width: 1024px) {
+    .sidebar {
+        left: 0;
+    }
+
+    .sidebar-overlay {
+        display: none;
+    }
+
+    .has-sidebar {
+        margin-left: 18rem;
+    }
+
+    .has-sidebar > section.section {
+        padding-top: 2rem;
+        padding-left: 2rem;
     }
 }
 
-.sidebar {
-    background-color: hsl(0, 0%, 96%);
+@media(max-width: 1024px) {
+    .sidebar:not(.is-active) {
+        left: -18rem;
+    }
+
+    .sidebar.is-active {
+        background-color: hsl(0, 0%, 96%);
+        min-height: 100vh;
+        left: 0;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        width: 18rem;
+    }
+
+    .sidebar-overlay {
+        display: block;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+    }
+
+    .sidebar-overlay.is-active {
+        left: 0rem;
+        opacity: 100%;
+        position: absolute;
+        min-height: 100vh;
+        top: 0;
+        min-width: 100vw;
+        z-index: 31;
+    }
+
+    .navbar-burger {
+        margin-left: inherit;
+    }
+}
+
+.menu-brand {
+    align-content: center;
+    align-self: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.menu-brand img {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.menu-brand:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.menu-list a:hover:not(.is-active){
+    color: rgb(50, 115, 220);
+}
+
+/** Divider shouldn't have a gap if it's empty **/
+
+.sidebar :empty.divider {
+    display: block;
+    margin-top: 14px;
+}
+
+:empty.divider:before {
+    margin-right: 0;
+}
+
+:empty.divider:after {
+    margin-left: 0;
+}
+
+/** Navbar **/
+
+.icon.is-discord {
+    color: #7489DA;
+}
+
+.navbar .button.is-discord {
+    background: none;
+    color: black;
+    border: none;
+}
+
+.navbar .button.is-discord:hover {
+    background-color: rgba(116, 137, 218, 0.1);
+    color: #7489DA;  /* Blurple */
+}
+
+/** General button fixes **/
+.button {
+    align-items: baseline;
 }
