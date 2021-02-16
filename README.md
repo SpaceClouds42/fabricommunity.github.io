@@ -79,21 +79,31 @@ navigation should be structured. It consists of a set of navigation nodes, with 
 
 ```yaml
 nodes:
-  - title: "One"
+  - type: "node"
+    title: "One"
     path: "/one"
     icon: "globe"
+  
+  - type: "spacer"
 
-  - title: "Two"
+  - type: "node"
+    title: "Two"
     path: "/two"
     icon: "arrow-right"
 
     children:
-      - title: "Three"
+      - type: "node"
+        title: "Three"
         path: "/two/three"
         icon: "car"
 ```
 
-Each node has the following properties:
+Two types of node are supported:
+
+* `type: node` denotes a standard navigation node, which may have children.
+* `type: spacer` denotes a spacer, used to break up the navigation list. Spacers have no properties.
+
+For `node`-typed nodes, each has the following properties:
 
 * **Required:** `icon` - The name of a font-awesome icon (including pro icons) to use for this navigation node.
 * **Required:** `path` - The absolute path of the document this node should take you to when clicked. This may be the
@@ -164,6 +174,8 @@ The following variables are available to all Pebble templates, including in Mark
 * `navigation` - a Navigation `Root` object, containing the following properties:
     * `currentPath` - A string representing the path to the current file.
     * `nodes` - A list of navigation `Node` objects, with the following properties:
+        * `type` - A string denoting the node type. If this is `"spacer"`, the node is a spacer and does not have any
+          other properties. Otherwise, `"node"` denotes normal navigation nodes, with the following properties.
         * `icon` - The name of the icon to use for this navigation node.
         * `path` - A string representing the path to navigate to, which may be a URL.
         * `title` - The name to display on the page.
