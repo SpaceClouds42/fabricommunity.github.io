@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fabric Community | {% block title %}N/A{% endblock %}</title>
+    <title>Fabric Community | {% block title %}{% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/static/css/bulma.min.css">
     <link rel="stylesheet" href="/static/css/prism.css">
+    <link rel="stylesheet" href="/static/css/core.css">
 
+    {# Syntax Highlighting: Prism #}
     <script async type="application/javascript" src="/static/js/prism.min.js"></script>
+
+    {# Icons: Font Awesome Pro #}
+    <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
 </head>
 <body class="line-numbers">
 {% block main %}
 
 {% endblock %}
-
-{% include './footer.html.peb' %}
 </body>
 </html>

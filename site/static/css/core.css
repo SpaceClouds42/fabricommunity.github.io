@@ -1,0 +1,28 @@
+/**
+    Main logo found on index.html.peb
+**/
+.index-icon {
+    width: 125px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+/**
+    Footer Related
+**/
+.footer-padder-s {
+    margin-bottom: 5px;
+}
+
+/**
+    Sidebar Related
+**/
+@media screen and (max-width: 768px) {
+    #menu-toggle:checked + .nav-menu {
+        display: block;
+    }
+}
+
+.sidebar {
+    background-color: hsl(0, 0%, 96%);
+}

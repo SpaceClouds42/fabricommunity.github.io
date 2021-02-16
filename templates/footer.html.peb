@@ -21,5 +21,13 @@
             The Fabric Community is an unofficial third-party community. We are not affiliated with
             <a href="https://fabricmc.net"> the Fabric project</a>.
         </p>
+        <hr>
+        <p>
+            <a href="https://discord.gg/X4YYb96Aj5" target="_blank" class="button is-medium is-discord is-outlined">
+                <span class="icon">
+                    <i class="fab fa-discord fa-lg"></i>
+                </span>
+            </a>
+        </p>
     </div>
 </footer>

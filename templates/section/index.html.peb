@@ -1,0 +1,15 @@
+    {% extends '../base.html.peb' %}
+
+        {% block title %}{{ meta.title }}{% endblock %}
+
+    {% block main %}
+        {% include "./sidebar.html.peb" %}
+
+        {% block content %}
+        <main class="container column is-10">
+            <div class="content">
+                    {{ body | raw }}
+            </div>
+        </main>
+        {% endblock %}
+    {% endblock %}
