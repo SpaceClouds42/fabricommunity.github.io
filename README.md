@@ -101,7 +101,8 @@ nodes:
 Two types of node are supported:
 
 * `type: node` denotes a standard navigation node, which may have children.
-* `type: spacer` denotes a spacer, used to break up the navigation list. Spacers have no properties.
+* `type: spacer` denotes a spacer, used to break up the navigation list. Spacers may optionally have a `title`, but
+  they have no other properties.
 
 For `node`-typed nodes, each has the following properties:
 
@@ -174,8 +175,9 @@ The following variables are available to all Pebble templates, including in Mark
 * `navigation` - a Navigation `Root` object, containing the following properties:
     * `currentPath` - A string representing the path to the current file.
     * `nodes` - A list of navigation `Node` objects, with the following properties:
-        * `type` - A string denoting the node type. If this is `"spacer"`, the node is a spacer and does not have any
-          other properties. Otherwise, `"node"` denotes normal navigation nodes, with the following properties.
+        * `type` - A string denoting the node type. If this is `"spacer"`, the node is a spacer (and may have a 
+          nullable `title` property). Otherwise, `"node"` denotes normal navigation nodes, with a full set of 
+          properties.
         * `icon` - The name of the icon to use for this navigation node.
         * `path` - A string representing the path to navigate to, which may be a URL.
         * `title` - The name to display on the page.
