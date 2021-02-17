@@ -1,17 +1,26 @@
-/** Index page logo **/
-
-.index-icon {
-    width: 125px;
-    height: auto;
-    image-rendering: pixelated;
-}
-
 /** Footer **/
+
 .footer-padder-s {
     margin-bottom: 5px;
 }
 
+/** Hero **/
+
+.hero-head .image {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+/** Main page navbar **/
+
+.navbar.is-main {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /** Sidebar **/
+
 .sidebar {
     background-color: hsl(0, 0%, 96%);
     display: flex;
@@ -130,11 +139,17 @@
     margin-left: 0;
 }
 
-/** Navbar **/
+/** Icons **/
 
 .icon.is-discord {
     color: #7489DA;
 }
+
+.icon.is-twitter {
+    color: #1DA1F2;
+}
+
+/** Navbars **/
 
 .navbar .button.is-discord {
     background: none;
@@ -147,7 +162,29 @@
     color: #7489DA;  /* Blurple */
 }
 
+.navbar .button.is-github {
+    background: none;
+    color: black;
+    border: none;
+}
+
+.navbar .button.is-github:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar .button.is-twitter {
+    background: none;
+    color: black;
+    border: none;
+}
+
+.navbar .button.is-twitter:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+    color: #1DA1F2;  /* Twitter Blue */
+}
+
 /** General button fixes **/
+
 .button {
     align-items: baseline;
 }
