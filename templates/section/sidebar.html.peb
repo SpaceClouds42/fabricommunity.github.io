@@ -2,7 +2,7 @@
     {# <img src="/static/images/logo.png" />#}
 
     <h3 class="is-3">
-        <span class="icon"><i class="fa fa-arrow-left"></i></span>
+        <span class="icon"><i class="fa fa-fw fa-arrow-left"></i></span>
         The Fabric Community
     </h3>
 </a>
@@ -17,27 +17,51 @@
             <li>
                 {% if node.children.size >= 1 %}
                     <a class="{% if node.path == navigation.currentPath %}is-active{%endif%}" href="{{ node.path }}">
-                        <span class="icon"><i class="{{ node.icon }}"></i></span> {{ node.title }}
-
-                        <span class="icon is-pulled-right">
-                            {% if navigation.currentPath.startsWith(node.path) %}
-                                <i class="fas fa-chevron-down"></i>
-                            {% else %}
-                                <i class="fas fa-chevron-right"></i>
+                        <span class="icon-text">
+                            {% if node.icon != null %}
+                                <span class="icon"><i class="{{ node.icon }} fa-fw"></i></span>
                             {% endif %}
+
+                            <span>{{ node.title }}</span>
+
+                            <span class="icon is-pulled-right">
+                                {% if navigation.currentPath.startsWith(node.path) %}
+                                    <i class="fas fa-chevron-down fa-fw"></i>
+                                {% else %}
+                                    <i class="fas fa-chevron-right fa-fw"></i>
+                                {% endif %}
+                            </span>
                         </span>
                     </a>
 
                     {% if navigation.currentPath.startsWith(node.path) %}
                         <ul>
                             {% for subnode in node.children %}
-                                <li><a href="{{ subnode.path }}"><i class="{{ subnode.icon }}"></i> {{ subnode.title }}</a></li>
+                                <li>
+                                    <a href="{{ subnode.path }}">
+                                        <span class="icon-text">
+                                            {% if subnode.icon != null %}
+                                                <span class="icon"><i class="{{ subnode.icon }} fa-fw"></i></span>
+                                            {% endif %}
+
+                                            <span>{{ subnode.title }}</span>
+                                        </span>
+                                    </a>
+                                </li>
                             {% endfor %}
                         </ul>
                     {% endif %}
 
                 {% else %}
-                    <a class="{% if node.path == navigation.currentPath %}is-active{%endif%}" href="{{ node.path }}"><i class="{{ node.icon }}"></i> {{ node.title }}</a>
+                    <a class="{% if node.path == navigation.currentPath %}is-active{%endif%}" href="{{ node.path }}">
+                        <span class="icon-text">
+                            {% if node.icon != null %}
+                                <span class="icon"><i class="{{ node.icon }} fa-fw"></i></span>
+                            {% endif %}
+
+                            <span>{{ node.title }}</span>
+                        </span>
+                    </a>
                 {% endif %}
             </li>
         {% elseif node.type == "spacer" %}

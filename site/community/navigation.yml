@@ -1,98 +1,44 @@
 nodes:
   - type: "node"
 
-    title: "Main "
-    path: "/docs"
-    icon: "fas fa-home"
-
-  - type: "node"
-
-    title: "With Spacer"
-    path: "/docs/"
+    title: "Home"
+    path: "/community"
     icon: "fas fa-home"
 
   - type: "spacer"
+    title: "Policies"
+
+  - type: "node"
+
+    title: "Rules"
+    path: "/community/rules"
+    icon: "fas fa-book-user"
+
+  - type: "node"
+
+    title: "Getting Help"
+    path: "/community/help"
+    icon: "fas fa-exclamation-triangle"
+
+  - type: "node"
+
+    title: "Code of Conduct"
+    path: "/community/code-of-conduct"
+    icon: "fas fa-file-alt"
+
+  - type: "node"
+
+    title: "Moderation Policy"
+    path: "/community/moderation"
+    icon: "fas fa-gavel"
+
+  - type: "spacer"
+    title: "Contributing"
 
   - type: "node"
 
     title: "With Children"
     path: "/docs"
-    icon: "fas fa-home"
-
-    children:
-      - type: "node"
-
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
-
-      - type: "node"
-
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
-
-  - type: "node"
-
-    title: "With Children"
-    path: "/docs/"
-    icon: "fas fa-home"
-
-    children:
-      - type: "node"
-
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
-
-      - type: "node"
-
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
-
-  - type: "node"
-
-    title: "With Children"
-    path: "/docs/"
-    icon: "fas fa-home"
-
-    children:
-      - type: "node"
-
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
-
-      - type: "node"
-
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
-
-  - type: "node"
-
-    title: "With Children"
-    path: "/docs/"
-    icon: "fas fa-home"
-
-    children:
-      - type: "node"
-
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
-
-      - type: "node"
-
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
-
-  - type: "node"
-
-    title: "With Children"
-    path: "/docs/"
     icon: "fas fa-home"
 
     children:

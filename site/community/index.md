@@ -1,20 +1,23 @@
 ---
-title: Fabric Community Documentation
+title: Community Information
 ---
 
-# Fabric Community Documentation
+# Fabric Community Information
 
-Welcome to the Fabric Community Documentation. The documentation are open sourced markdown-based documentation that can
-help you learn how to utilize the Fabric Modloader and community made libraries to make your mod!
+The Fabric Community is an unofficial community that provides a safe, friendly environment for people of all backgrounds
+to get together, socialize, talk about Fabric, and create Fabric mods. It aims to act as an alternative community that
+addresses the apparent contempt for minority groups in the Fabric community at large, through inclusive policy and
+active, responsive moderation.
 
-## Where can I start?
+We believe that a community should exist to serve the needs of its users. To that end, we try to do the following:
 
-Here are some great places to get started!
+* Be transparent about moderation actions in public
+* Clearly document our policies and explain what we expect of our users
+* Educate ourselves on threats to vulnerable groups, and use that education to take a stand against bigotry and harmful 
+  speech
+* Get our users involved with important decisions and changes to the community
+* Gracefully accept feedback from our users and work directly with the community to implement changes based upon it
 
-- [Making your first Fabric mod](tutorial)
-- [Migrating from Forge](migrating-from-forge)
-- [Texture Making](textures)
-
-## I want to help!
-
-You can checkout the [GitHub for the Contributing Guide](), and [our discord to chat about your changes.]()
+**Note:** This site is a living, breathing form of documentation. It will change over time as we encounter new 
+challenges and attempt to overcome them. We're always interested in feedback, so feel free to chat with us in
+`#discord-meta` (or via a private message) if you need anything!
