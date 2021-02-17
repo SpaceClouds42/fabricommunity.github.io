@@ -1,5 +1,10 @@
 <a class="menu-brand" href="/">
-    <img src="/static/images/logo.png" />
+    {# <img src="/static/images/logo.png" />#}
+
+    <h3 class="is-3">
+        <span class="icon"><i class="fa fa-arrow-left"></i></span>
+        The Fabric Community
+    </h3>
 </a>
 
 <p class="menu-label">

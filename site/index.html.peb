@@ -5,9 +5,10 @@
 {% block main %}
     <section class="hero is-light">
         <div class="hero-head">
-            <img src="/static/images/logo.png" class="image"/>
+            {# <img src="/static/images/logo.png" class="image"/>#}
         </div>
         <div class="hero-body has-text-centered">
+            <p class="title">The Fabric Community</p>
             <p class="subtitle">
                 The friendly, safe, diverse community for Fabric mod-loader users and developers.
             </p>
