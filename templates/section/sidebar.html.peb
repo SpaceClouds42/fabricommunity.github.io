@@ -2,8 +2,10 @@
     {# <img src="/static/images/logo.png" />#}
 
     <h3 class="is-3">
-        <span class="icon"><i class="fa fa-fw fa-arrow-left"></i></span>
-        The Fabric Community
+        <span class="icon-text">
+            <span class="icon"><i class="fa fa-fw fa-arrow-left"></i></span>
+            <span>The Fabric Community</span>
+        </span>
     </h3>
 </a>
 
