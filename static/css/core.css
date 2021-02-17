@@ -116,8 +116,12 @@
 }
 
 .menu-brand:hover {
+    /* TODO: Uncomment when we have a logo */
+
+    /*
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 2px;
+    */
 }
 
 .menu-list a:hover:not(.is-active){
