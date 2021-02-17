@@ -9,6 +9,9 @@ java -jar SSG.jar build^
     --output-path build^
     --sources-path site^
     --template-path templates^
-    --section docs
+    --section community^
+    --section modding^
+    --section projects^
+    --section using
 
 xcopy site\static build\static /E/I/Q

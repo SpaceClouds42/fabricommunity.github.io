@@ -5,28 +5,15 @@
                 Made with <span class="icon is-bold"><i class="fas fa-heart"></i></span> by The Fabric Community.</a>
         </p>
         <p>
-            This website and its content is licensed under the
-            <a href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/LICENSE-CC-BY-NC-SA.md">Creative
-                Commons BY-NC-SA License</a>.
-        </p>
-        <p>&nbsp;</p>
-        <p>
-            All code examples are licensed under the
-            <a href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/LICENSE-CC0.md">Creative
-                Commons Zero License</a>.
+            Website:
+            <a href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/LICENSE-CC-BY-NC-SA.md">
+                CC BY-NC-SA</a> | Code examples:
+            <a href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/LICENSE-CC0.md">CC0</a>
         </p>
         <p>&nbsp;</p>
         <p>
             The Fabric Community is an unofficial third-party community. We are not affiliated with
             <a href="https://fabricmc.net"> the Fabric project</a>.
-        </p>
-        <hr>
-        <p>
-            <a href="https://discord.gg/X4YYb96Aj5" target="_blank" class="button is-medium is-discord is-outlined">
-                <span class="icon">
-                    <i class="fab fa-discord fa-lg"></i>
-                </span>
-            </a>
         </p>
     </div>
 </footer>

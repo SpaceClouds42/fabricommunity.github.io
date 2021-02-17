@@ -1,0 +1,109 @@
+nodes:
+  - type: "node"
+
+    title: "Main "
+    path: "/docs"
+    icon: "fas fa-home"
+
+  - type: "node"
+
+    title: "With Spacer"
+    path: "/docs/"
+    icon: "fas fa-home"
+
+  - type: "spacer"
+
+  - type: "node"
+
+    title: "With Children"
+    path: "/docs"
+    icon: "fas fa-home"
+
+    children:
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+  - type: "node"
+
+    title: "With Children"
+    path: "/docs/"
+    icon: "fas fa-home"
+
+    children:
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+  - type: "node"
+
+    title: "With Children"
+    path: "/docs/"
+    icon: "fas fa-home"
+
+    children:
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+  - type: "node"
+
+    title: "With Children"
+    path: "/docs/"
+    icon: "fas fa-home"
+
+    children:
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+  - type: "node"
+
+    title: "With Children"
+    path: "/docs/"
+    icon: "fas fa-home"
+
+    children:
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
+
+      - type: "node"
+
+        title: "Child"
+        path: "/docs/"
+        icon: "fas fa-home"
