@@ -133,6 +133,7 @@
 .sidebar :empty.divider {
     display: block;
     margin-top: 14px;
+    margin-bottom: 14px;
 }
 
 :empty.divider:before {
@@ -141,6 +142,34 @@
 
 :empty.divider:after {
     margin-left: 0;
+}
+
+/** Icon-text alignment **/
+
+.icon-text {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.icon-text span {
+    align-items: baseline;
+    display: inline-flex;
+}
+
+.icon-text span.icon {
+    align-items: center;
+}
+
+.icon-text .is-pulled-right {
+    align-items: flex-end !important;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.icon-text span ~ span {
+    padding-left: 10px;
 }
 
 /** Icons **/
@@ -185,10 +214,4 @@
 .navbar .button.is-twitter:hover {
     background-color: rgba(29, 161, 242, 0.1);
     color: #1DA1F2;  /* Twitter Blue */
-}
-
-/** General button fixes **/
-
-.button {
-    align-items: baseline;
 }
