@@ -12,13 +12,15 @@
             <li>
                 {% if node.children.size >= 1 %}
                     <a class="{% if node.path == navigation.currentPath %}is-active{%endif%}" href="{{ node.path }}">
-                        <i class="{{ node.icon }}"></i> {{ node.title }}
+                        <span class="icon"><i class="{{ node.icon }}"></i></span> {{ node.title }}
 
-                        {% if navigation.currentPath.startsWith(node.path) %}
-                            <span class="is-pulled-right"><i class="fas fa-chevron-down"></i></span>
-                        {% else %}
-                            <span class="is-pulled-right"><i class="fas fa-chevron-right"></i></span>
-                        {% endif %}
+                        <span class="icon is-pulled-right">
+                            {% if navigation.currentPath.startsWith(node.path) %}
+                                <i class="fas fa-chevron-down"></i>
+                            {% else %}
+                                <i class="fas fa-chevron-right"></i>
+                            {% endif %}
+                        </span>
                     </a>
 
                     {% if navigation.currentPath.startsWith(node.path) %}
@@ -50,4 +52,6 @@
         <p> There are no articles. </p>
     {% endfor %}
 </ul>
+
+{% include "./footer.html.peb" %}
 
