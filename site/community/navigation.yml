@@ -37,19 +37,25 @@ nodes:
 
   - type: "node"
 
-    title: "With Children"
-    path: "/docs"
-    icon: "fas fa-home"
+    title: "Editing the Site"
+    path: "/community/editing"
+    icon: "far fa-globe"
 
     children:
       - type: "node"
 
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
+        title: "Editing Documents"
+        path: "/community/editing/documents"
+        icon: "fas fa-pencil-alt"
 
       - type: "node"
 
-        title: "Child"
-        path: "/docs/"
-        icon: "fas fa-home"
+        title: "Advanced Formatting"
+        path: "/community/editing/advanced"
+        icon: "fas fa-text-size"
+
+      - type: "node"
+
+        title: "Templating & Design"
+        path: "/community/editing/templates"
+        icon: "fas fa-ruler-triangle"
