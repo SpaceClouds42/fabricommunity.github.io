@@ -1,4 +1,4 @@
-{% extends './base.html.peb' %}
+{% extends 'base' %}
 
 {% block title %}Home{% endblock %}
 
@@ -104,5 +104,5 @@
         </section>
     </main>
 
-    {% include './footer.html.peb' %}
+    {% include 'footer' %}
 {% endblock %}

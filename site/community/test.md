@@ -9,7 +9,7 @@ mess with it locally.
 
 ---
 
-{% embed "./blocks/info.html.peb" %}
+{% embed "blocks/info" %}
   {% block title %}Info admonition title!{% endblock %}
   
   {% block body %}

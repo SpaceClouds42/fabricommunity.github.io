@@ -1,4 +1,4 @@
-{% extends '../base.html.peb' %}
+{% extends 'base' %}
 
 {% block title %}{{ meta.title }}{% endblock %}
 
@@ -9,14 +9,14 @@
 
 {% block main %}
     <aside class="sidebar" id="sidebar">
-        {% include "./sidebar.html.peb" %}
+        {% include "section/sidebar" %}
     </aside>
 
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
     {% block content %}
         <main class="has-sidebar">
-            {% include "./navbar.html.peb" %}
+            {% include "section/navbar" %}
 
             <section class="content section">
                 {{ body | raw }}

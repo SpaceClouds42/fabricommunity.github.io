@@ -84,5 +84,5 @@
     {% endfor %}
 </ul>
 
-{% include "./footer.html.peb" %}
+{% include "section/footer" %}
 

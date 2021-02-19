@@ -162,7 +162,7 @@ following ways:
     * All images should be placed in `static/images`.
     * All JavaScript scripts should be placed in `static/js`.
 
-**Note:** Templates in the `site/` folder are temporarily written to `templates/TEMP.html.peb` during rendering. This
+**Note:** Templates in the `site/` folder are temporarily written to `templates/temp.html.peb` during rendering. This
 allows them to reference other templates, as if they themselves were placed in the `templates/` folder.
 
 ### Templating
