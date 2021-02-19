@@ -2,7 +2,7 @@
 <div class="message-header">
     <p>{% block title %}Info{% endblock %}</p>
 </div>
-<div class="message-body content">
+<div class="message-body">
 
 {% block body %}{% endblock %}
 

@@ -1,0 +1,50 @@
+{#
+    Button macro, for inserting Bulma buttons into templates. Used like any function, once this file is imported.
+
+    {% import "inline/macros  %}
+    {{ button("https://google.com", "Google") }}
+
+    ** Required arguments:**
+
+    * url: URL to link to
+    * text: Button text
+
+    ** Optional arguments:**
+
+    * target: Value for the link's `target` attribute, defaults to `_blank`.
+    * classes: Extra space-delimited CSS classes for the button's  `<a>` element.
+    * icon_name: Font-awesome icon, including icon set and fa-prefix. For example: `far fa-globe`,
+    * icon_classes: Extra space-delimited CSS classes for the icon's `<span>` container element.
+#}
+{% macro button(url, text, target="_blank", classes="", icon_name="", icon_classes="") %}
+<a href="{{ url }}" target="{{ target }}" class="button {{ classes }}">
+    <span class="icon-text">
+        {% if icon_name != "" %}
+            {{ icon(icon_name, icon_classes) }}
+        {% endif %}
+        <span>
+            {{ text }}
+        </span>
+    </span>
+</a>
+{% endmacro %}
+
+{#
+    Icon macro, for inserting Font-Awesome icons into templates. Used like any function, once this file is imported.
+
+    {% import "inline/macros  %}
+    {{ icon("far fa-globe") }}
+
+    ** Required arguments:**
+
+    * icon: Font-awesome icon, including icon set and fa-prefix. For example: `far fa-globe`.
+
+    ** Optional arguments:**
+
+    * icon_classes: Extra space-delimited CSS classes for the icon's `<span>` container element.
+#}
+{% macro icon(icon, icon_classes="") %}
+    <span class="icon {{ icon_classes }}">
+        <i class="{{ icon }}"></i>
+    </span>
+{% endmacro %}

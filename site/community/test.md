@@ -9,6 +9,8 @@ mess with it locally.
 
 ---
 
+{% import "inline/macros" %}
+
 {% embed "blocks/info" %}
   {% block title %}Info admonition title!{% endblock %}
   
@@ -20,3 +22,8 @@ mess with it locally.
 * This is a Markdown list placed within a message.
   {% endblock %}
 {% endembed %}
+
+{{ button(url="https://google.com", text="Google", classes="is-warning", icon_name="far fa-globe", icon_classes="has-text-danger") }}
+{{ button(url="https://google.com", text="Google", classes="is-warning", icon_name="far fa-globe", icon_classes="has-text-danger") }}
+
+{{ button("https://google.com", "Simpler Button") }}
