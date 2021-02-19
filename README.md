@@ -82,20 +82,20 @@ nodes:
   - type: "node"
     title: "One"
     path: "/one"
-    icon: "globe"
+    icon: "far fa-globe"
   
   - type: "spacer"
 
   - type: "node"
     title: "Two"
     path: "/two"
-    icon: "arrow-right"
+    icon: "fas fa-arrow-right"
 
     children:
       - type: "node"
         title: "Three"
         path: "/two/three"
-        icon: "car"
+        icon: "fas fa-pen"
 ```
 
 Two types of node are supported:
