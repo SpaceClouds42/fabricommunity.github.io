@@ -148,7 +148,7 @@
 
 .icon-text {
     align-items: center;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -160,6 +160,10 @@
 
 .icon-text span.icon {
     align-items: center;
+}
+
+.button .icon-text span:not(.icon) {
+    padding-left: 0;
 }
 
 .icon-text .is-pulled-right {
