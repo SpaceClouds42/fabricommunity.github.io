@@ -29,6 +29,7 @@
 </a>
 {% endmacro %}
 
+
 {#
     Icon macro, for inserting Font-Awesome icons into templates. Used like any function, once this file is imported.
 
@@ -37,14 +38,50 @@
 
     ** Required arguments:**
 
-    * icon: Font-awesome icon, including icon set and fa-prefix. For example: `far fa-globe`.
+    * icon_name: Font-awesome icon, including icon set and fa-prefix. For example: `far fa-globe`.
 
     ** Optional arguments:**
 
     * icon_classes: Extra space-delimited CSS classes for the icon's `<span>` container element.
 #}
-{% macro icon(icon, icon_classes="") %}
+{% macro icon(icon_name, icon_classes="") %}
     <span class="icon {{ icon_classes }}">
-        <i class="{{ icon }}"></i>
+        <i class="{{ icon_name }}"></i>
     </span>
+{% endmacro %}
+
+{#
+    Tag macro, for inserting Bulma tags into templates. Used like any function, once this file is imported.
+
+    {% import "inline/macros  %}
+    {{ tag("Beginner") }}
+
+    ** Required arguments:**
+
+    * text: Text to display inside the tags.
+
+    ** Optional arguments:**
+
+    * size: Tag size, defaulting to "normal". Can also be "medium" or "large".
+    * style: One of "black", "dark", "light", "white", "primary", "link", "info", "success", "warning", "danger"
+    * rounded: Whether this tag should have rounded corners. Defaults to false.
+    * url: URL to link to, if this tag should be an anchor.
+#}
+{% macro tag(text, size="normal", style=null, rounded=false, url=null) %}
+    {% if url is null %}
+        <span
+    {% else %}
+        <a href="{{ url }}"
+    {% endif %}
+
+    class="is-{{ size }}
+        {% if not style is null %} is-{{ style }}{% endif %}
+        {% if rounded %} is-rounded{% endif %} ">
+
+    {% if url is null %}
+        </span>
+    {% else %}
+        </a>
+    {% endif %}
+
 {% endmacro %}
