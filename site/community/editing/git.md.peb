@@ -23,13 +23,13 @@ This will create a new copy of the repository that you can work on. It should op
 
 {% columns "is-desktop" %}
     {% column %}
-        {% image %}
+        {% image "has-border" %}
 ![Fork button location](/static/images/community/editing/git/1-fork.png)
         {% endimage %}
     {% endcolumn %}
 
     {% column %}
-        {% image %}
+        {% image "has-border" %}
 ![Fork location](/static/images/community/editing/git/2-fork-location.png)
         {% endimage %}
     {% endcolumn %}

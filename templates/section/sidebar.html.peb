@@ -40,7 +40,7 @@
                         <ul>
                             {% for subnode in node.children %}
                                 <li>
-                                    <a href="{{ subnode.path }}">
+                                    <a href="{{ subnode.path }}" {% if subnode.path == navigation.currentPath %}class="is-active"{%endif%}>
                                         <span class="icon-text">
                                             {% if subnode.icon != null %}
                                                 <span class="icon"><i class="{{ subnode.icon }} fa-fw"></i></span>
