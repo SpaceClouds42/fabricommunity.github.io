@@ -1,0 +1,36 @@
+---
+title: Git Basics
+---
+
+# Git Basics
+
+While this site was created by developers, we do not require writers to be developers. However, we've found that the
+best way for us to keep track of everything is [on GitHub](https://github.com/FabriCommunity/fabricommunity.github.io),
+which very much _is_ a developer tool. As a result, we've written this document for people that would like to write
+for us, but may not have used Git or GitHub before.
+
+In this tutorial, we will be making use of [GitHub Desktop](https://desktop.github.com/). If you're a Linux user, you
+can use [this Linux build](https://github.com/shiftkey/desktop#packagecloud) instead. Before continuing, please
+download and install GitHub Desktop, and [create a GitHub account](https://github.com/join) if you haven't already.
+
+## Setting up
+The first thing you'll need to do is create your own copy of the site on your GitHub account. This is known as a
+"fork", and it allows you to make changes independently of anything we're working on. To do this, go to
+[our GitHub repository](https://github.com/FabriCommunity/fabricommunity.github.io) and click the "fork" button at
+the top-right. **If GitHub asks you where to fork to**, click on your username.
+
+This will create a new copy of the repository that you can work on. It should open in your browser automatically.
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image %}
+![Fork button location](/static/images/community/editing/git/1-fork.png)
+        {% endimage %}
+    {% endcolumn %}
+
+    {% column %}
+        {% image %}
+![Fork location](/static/images/community/editing/git/2-fork-location.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}

@@ -219,3 +219,35 @@
     background-color: rgba(29, 161, 242, 0.1);
     color: #1DA1F2;  /* Twitter Blue */
 }
+
+/** Centering image wrapper **/
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.image-wrapper p {
+    display: block;
+    width: 100%;
+}
+
+@media(min-width: 1024px) {
+    .image-wrapper {
+        margin: auto;
+        width: 75%;
+    }
+}
+@media(max-width: 1024px) {
+    .image-wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        width: 100%;
+    }
+}
+
+.column .image-wrapper {
+    margin: unset;
+    padding: unset;
+    width: 100%;
+}
