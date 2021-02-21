@@ -1,0 +1,68 @@
+---
+title: Editing the Site
+---
+
+{% import "inline/macros" %}
+
+# Editing the Site
+
+{% buttons %}
+{{ button(
+    "https://github.com/FabriCommunity/fabricommunity.github.io", 
+    "GitHub", 
+    classes="is-black",
+    icon_name="fab fa-github"
+) }} {{ button(
+    "https://commonmark.org/help/", 
+    "Markdown Cheat Sheet", 
+    classes="is-info",
+    icon_name="fab fa-markdown"
+) }} {{ button(
+    "https://pebbletemplates.io/", 
+    "Pebble Docs", 
+    classes="is-success",
+    icon_name="fas fa-code"
+) }}
+{% endbuttons %}
+
+If you'd like to contribute an article, document or tutorial, you're in the right place! Before you can start writing,
+you'll need to learn about how this site works, and how we get from document to page.
+
+## Static Site Generation
+
+This site is, at a basic level, a collection of Markdown files - specifically, using the CommonMark standard. If you've
+already worked with Markdown then this will largely work how you expect 
+([with a few changes and extras](/community/editing/markdown)), but if you're not familiar then you can take a look at
+[the CommonMark tutorial site](https://commonmark.org/help/tutorial/).
+
+Additionally, all of our Markdown files are treated like Pebble templates. While this doesn't change anything about
+working with Markdown, it does allow for [a lot of extra formatting options](/community/editing/formatting). That said,
+if you're a beginner or don't require any special formatting, feel free to ignore this - it won't affect your editing
+experience most of the time.
+
+## Getting Started
+
+Our site exists entirely within [a single GitHub repository](https://github.com/FabriCommunity/fabricommunity.github.io).
+If you're familiar with working with GitHub and Git then feel free to fork the repository, create a branch, and start
+working on a pull request.
+
+If you're not familiar, we've created [a Git Basics page](/community/editing/git) for you. This page has been created
+with the absolute beginner in mind, and it should be applicable to most people's computers. We do not recommend editing
+on a mobile device, even if it's technically possible using GitHub's editor, as the way our documents are formatted
+differs slightly from what many editors consider "standard" Markdown.
+
+## Editing Tips
+
+{# TODO: Move dialects section to requirements section in editing document #}
+
+* **Try to write in a formal manner.** This means writing paragraphs instead of disjointed sentences, splitting your
+    documents into sections using headers, and using correct punctuation and grammar. If you're not a native English
+    speaker, don't worry - we'll work with you to improve your documents if required, and we're happy to make
+    corrections for you if you'd prefer.
+* We recommend that everyone writing documents for the site should **run their text through
+    [LanguageTool](https://languagetool.org/) or another grammar/spelling checker**. Everyone makes mistakes, and this
+    will help to ensure that all of our documents have a consistent style and tone. If a document doesn't seem to match
+    up, we'll do this ourselves in the review process and let you know what should be changed.
+* We do not enforce an English dialect site-wide, but we do require that you use **the same English dialect across a
+    single document**. If a document starts off using UK English, then it should be entirely written in UK English.
+    Additionally, we will not accept contributions that change the English dialect of an existing document.

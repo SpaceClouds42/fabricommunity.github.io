@@ -44,14 +44,26 @@ nodes:
     children:
       - type: "node"
 
+        title: "Git Basics"
+        path: "/community/editing/git"
+        icon: "fab fa-git-alt"
+
+      - type: "node"
+
         title: "Editing Documents"
         path: "/community/editing/documents"
         icon: "fas fa-pencil-alt"
 
       - type: "node"
 
-        title: "Advanced Formatting"
-        path: "/community/editing/advanced"
+        title: "Advanced Markdown"
+        path: "/community/editing/markdown"
+        icon: "fab fa-markdown"
+
+      - type: "node"
+
+        title: "Extra Formatting"
+        path: "/community/editing/formatting"
         icon: "fas fa-text-size"
 
       - type: "node"
