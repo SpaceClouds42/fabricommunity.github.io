@@ -19,7 +19,7 @@
 
     {% block head %}{% endblock %}
 </head>
-<body class="line-numbers">
+<body class="line-numbers has-navbar-fixed-top">
 {% block main %}{% endblock %}
 </body>
 </html>
