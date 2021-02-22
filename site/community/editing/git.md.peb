@@ -25,24 +25,100 @@ This will create a new copy of the repository that you can work on. It should op
 {% columns "is-desktop" %}
     {% column %}
         {% image "has-border" %}
-![Fork button location](/static/images/community/editing/git/1-fork.png)
+[![Fork button location](/static/images/community/editing/git/1-fork.png)](/static/images/community/editing/git/1-fork.png)
         {% endimage %}
     {% endcolumn %}
 
     {% column %}
         {% image "has-border" %}
-
-![Fork location](/static/images/community/editing/git/2-fork-location.png)
-
+[![Fork location](/static/images/community/editing/git/2-fork-location.png)](/static/images/community/editing/git/2-fork-location.png)
         {% endimage %}
     {% endcolumn %}
 {% endcolumns %}
 
 Once you've created your fork, you'll need to download it to your computer to start working on it.
 
-## Setting up: GitHub Desktop
+## Setting up: Cloning the Repository
+
+Next, you'll need to set up GitHub Desktop and download the repository to your computer. The act of downloading a copy
+of a repository is known as "cloning".
 
 Once you've installed GitHub Desktop, open it and log into your GitHub account. You'll be presented with a screen
 similar to the image marked with `1` below, with your GitHub repositories listed on the right. Click on your fork,
 which will be named `username/fabricommunity.github.io`, and then on the blue `Clone` button at the bottom of the
 window.
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image "has-border" %}
+[![Main screen](/static/images/community/editing/git/3-main-screen.png)](/static/images/community/editing/git/3-main-screen.png)
+        {% endimage %}
+    {% endcolumn %}
+
+    {% column %}
+        {% image "has-border" %}
+[![Repo list](/static/images/community/editing/git/4-repo-list.png)](/static/images/community/editing/git/4-repo-list.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}
+
+You will be presented with a dialog asking you where you'd like to clone the repository to. If you're happy with the
+location it gives you then you can simply click the `Clone` button - if not, click the `Choose` button first and pick
+a folder you'd like to place your copy of the repository into.
+
+If GitHub Desktop asks you how you're planning to use your fork, select `To contribute to the parent project` and click
+the `Continue` button.
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image "has-border" %}
+[![Clone dialog](/static/images/community/editing/git/5-clone-dialog.png)](/static/images/community/editing/git/5-clone-dialog.png)
+        {% endimage %}
+    {% endcolumn %}
+
+    {% column %}
+        {% image "has-border" %}
+[![Fork usage dialog](/static/images/community/editing/git/6-fork-usage.png)](/static/images/community/editing/git/6-fork-usage.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}
+
+## Setting up: Creating a Branch
+
+You're almost done - there's just one thing left to do before you can start working. It's always best to keep your
+changes on a separate branch - essentially, branches exist to keep sets of changes separate from each other, and you
+should always work on a branch other than `root` or `gh-pages`.
+
+Click the `Current branch` button at the top of the window, and then on the `New branch` button. Give it a short name
+related to what you're changing, without spaces - for example, `git-doc` - and click on `Create branch`.
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image "has-border" %}
+[![Branch list](/static/images/community/editing/git/7-branch-list.png)](/static/images/community/editing/git/7-branch-list.png)
+        {% endimage %}
+    {% endcolumn %}
+
+    {% column %}
+        {% image "has-border" %}
+[![New branch](/static/images/community/editing/git/8-new-branch.png)](/static/images/community/editing/git/8-new-branch.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}
+
+Finally, click on the `Publish branch` button to upload your new branch to GitHub. This should leave you with a screen
+similar to the image marked with `4` below.
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image "has-border" %}
+[![Publish Branch](/static/images/community/editing/git/9-publish-branch.png)](/static/images/community/editing/git/9-publish-branch.png)
+        {% endimage %}
+    {% endcolumn %}
+
+    {% column %}
+        {% image "has-border" %}
+[![Ready](/static/images/community/editing/git/10-ready.png)](/static/images/community/editing/git/10-ready.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}
