@@ -223,10 +223,23 @@
 best way for us to keep track of everything is <a href="https://github.com/FabriCommunity/fabricommunity.github.io">on GitHub</a>,
 which very much <em>is</em> a developer tool. As a result, we've written this document for people that would like to write
 for us, but may not have used Git or GitHub before.</p>
+<div class="columns ">
+<div class="column is-half is-offset-one-quarter">
+<article class="message is-info">
+<div class="message-header ">
+<p>Enlarging images</p>
+</div>
+<div class="message-body ">
+<p>If you're having a hard time reading any of the tutorial images, feel free to click on them to enlarge them, or hold
+the <code>CTRL</code> (or <code>Command</code> on macOS) key while clicking on an image to open it in a new tab.</p>
+</div>
+</article>
+</div>
+</div>
 <p>In this tutorial, we will be making use of <a href="https://desktop.github.com/">GitHub Desktop</a>. If you're a Linux user, you
 can use <a href="https://github.com/shiftkey/desktop#packagecloud">this Linux build</a> instead. Before continuing, please
 download and install GitHub Desktop, and <a href="https://github.com/join">create a GitHub account</a> if you haven't already.</p>
-<h2 id="setting-github-repository"><a href="#setting-github-repository" id="setting-github-repository">Setting: GitHub Repository</a></h2>
+<h2 id="setting-up-github-repository"><a href="#setting-up-github-repository" id="setting-up-github-repository">Setting up: GitHub Repository</a></h2>
 <p>The first thing you'll need to do is create your own copy of the site on your GitHub account. This is known as a
 &quot;fork&quot;, and it allows you to make changes independently of anything we're working on. To do this, go to
 <a href="https://github.com/FabriCommunity/fabricommunity.github.io">our GitHub repository</a> and click the &quot;fork&quot; button at
@@ -313,6 +326,81 @@ similar to the image marked with <code>4</code> below.</p>
 </div>
 </div>
 </div>
+<h2 id="making-changes"><a href="#making-changes" id="making-changes">Making Changes</a></h2>
+<p>Now that you've got everything set up, get yourself a text editor (like Visual Studio Code) and get to writing! For
+information on the specifics of editing documents and articles, please take a look at the other links in the left
+sidebar.</p>
+<p>Once you've modified some files, come back to GitHub Desktop. It's time to tell GitHub about the changes you've made
+by collecting your changes into a &quot;commit&quot;, and uploading it to GitHub - which is known as &quot;pushing&quot;.</p>
+<p>On the left side of the window is the <code>Changes</code> tab. This lists every file you created, removed or made changes to.
+Ensure that the box next to each file is checked, and then enter your commit message. In the first, smaller box, you
+should write a short summary of your changes. Be descriptive, but try to keep it short. If you need to add extra
+information, you can use the larger box to do so.</p>
+<p>When you're ready, click on the <code>Commit</code> button. This will create your commit - but you'll still need to push it to
+GitHub!</p>
+<div class="columns is-desktop">
+<div class="column ">
+<div class="image-wrapper has-border">
+<p><a href="/static/images/community/editing/git/11-commit.png"><img src="/static/images/community/editing/git/11-commit.png" alt="Commit changes" /></a></p>
+</div>
+</div>
+<div class="column ">
+<div class="image-wrapper has-border">
+<p><a href="/static/images/community/editing/git/12-commit-message.png"><img src="/static/images/community/editing/git/12-commit-message.png" alt="Commit message" /></a></p>
+</div>
+</div>
+</div>
+<p>Once you've created your commit, click on the <code>Push origin</code> button at the top of the window. This will upload your
+changes to GitHub, where they can be viewed by anyone!</p>
+<div class="columns is-desktop">
+<div class="column ">
+<div class="image-wrapper has-border">
+<p><a href="/static/images/community/editing/git/13-push.png"><img src="/static/images/community/editing/git/13-push.png" alt="Push changes" /></a></p>
+</div>
+</div>
+<div class="column ">
+<div class="image-wrapper has-border">
+<p><a href="/static/images/community/editing/git/14-done.png"><img src="/static/images/community/editing/git/14-done.png" alt="Done" /></a></p>
+</div>
+</div>
+</div>
+<p>You can repeat this process as many times as you like as you continue to make changes. You don't have to push every
+commit individually, either - feel free to create a few commits and push them together if you prefer. We advise that
+you commit relatively often - this allows you to keep track of your changes over time - and, if something goes wrong,
+you'll more easily be able to roll back to a previous commit (you can do this from the <code>History</code> tab, but it's
+out of scope of this document.)</p>
+<h2 id="submitting-changes-for-inclusion"><a href="#submitting-changes-for-inclusion" id="submitting-changes-for-inclusion">Submitting Changes for Inclusion</a></h2>
+<p>If you need feedback from us, or you're happy with your changes, click the blue <code>Create Pull Request</code> button and
+the GitHub pull request page will open in a browser.</p>
+<div class="columns is-desktop">
+<div class="column ">
+<div class="image-wrapper has-border">
+<p><a href="/static/images/community/editing/git/15-pr-button.png"><img src="/static/images/community/editing/git/15-pr-button.png" alt="Push changes" /></a></p>
+</div>
+</div>
+</div>
+<p>Once you're on GitHub proper, give your pull request a title and a description. If possible, include screenshots of
+your work in the description, and explain what changes you made and why you made them. If you're still working on
+your submission then you can click the <code>Create draft PR</code> button, and your new pull request will be created and marked
+as a work-in-progress. Otherwise, if you're finished with your submission and are ready for feedback, click the
+<code>Create pull request</code> button.</p>
+<p>Once your pull request is open, we'll be notified, and we'll take a look at it as soon as we can! If you have any other
+changes to make, then you can continue to create and push commits - they'll be added to your pull request automatically.</p>
+<div class="columns is-desktop">
+<div class="column ">
+<div class="image-wrapper has-border">
+<p><a href="/static/images/community/editing/git/16-create-pr.png"><img src="/static/images/community/editing/git/16-create-pr.png" alt="Push changes" /></a></p>
+</div>
+</div>
+<div class="column ">
+<div class="image-wrapper has-border">
+<p><a href="/static/images/community/editing/git/17-pr-created.png"><img src="/static/images/community/editing/git/17-pr-created.png" alt="Push changes" /></a></p>
+</div>
+</div>
+</div>
+<p>Thanks for your contribution! When one of us has time, we'll review your pull request and provide you with feedback if
+anything needs to be changed. When everyone's happy, your pull request will be merged - the changes you've made will be
+included with the site, and GitHub will automatically build it and deploy it for everyone to see!</p>
             </section>
         </main>
     </body>
