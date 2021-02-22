@@ -9,11 +9,24 @@ best way for us to keep track of everything is [on GitHub](https://github.com/Fa
 which very much _is_ a developer tool. As a result, we've written this document for people that would like to write
 for us, but may not have used Git or GitHub before.
 
+{% columns %}
+    {% column "is-half is-offset-one-quarter" %}
+        {% message "is-info" %}
+            {% message_header %}Enlarging images{% end_message_header %}
+
+            {% message_body %}
+If you're having a hard time reading any of the tutorial images, feel free to click on them to enlarge them, or hold
+the `CTRL` (or `Command` on macOS) key while clicking on an image to open it in a new tab.
+            {% end_message_body %}
+        {% endmessage %}
+    {% endcolumn %}
+{% endcolumns %}
+
 In this tutorial, we will be making use of [GitHub Desktop](https://desktop.github.com/). If you're a Linux user, you
 can use [this Linux build](https://github.com/shiftkey/desktop#packagecloud) instead. Before continuing, please
 download and install GitHub Desktop, and [create a GitHub account](https://github.com/join) if you haven't already.
 
-## Setting: GitHub Repository
+## Setting up: GitHub Repository
 
 The first thing you'll need to do is create your own copy of the site on your GitHub account. This is known as a
 "fork", and it allows you to make changes independently of anything we're working on. To do this, go to
@@ -122,3 +135,97 @@ similar to the image marked with `4` below.
         {% endimage %}
     {% endcolumn %}
 {% endcolumns %}
+
+## Making Changes
+
+Now that you've got everything set up, get yourself a text editor (like Visual Studio Code) and get to writing! For
+information on the specifics of editing documents and articles, please take a look at the other links in the left
+sidebar.
+
+Once you've modified some files, come back to GitHub Desktop. It's time to tell GitHub about the changes you've made
+by collecting your changes into a "commit", and uploading it to GitHub - which is known as "pushing".
+
+On the left side of the window is the `Changes` tab. This lists every file you created, removed or made changes to.
+Ensure that the box next to each file is checked, and then enter your commit message. In the first, smaller box, you
+should write a short summary of your changes. Be descriptive, but try to keep it short. If you need to add extra
+information, you can use the larger box to do so.
+
+When you're ready, click on the `Commit` button. This will create your commit - but you'll still need to push it to
+GitHub!
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image "has-border" %}
+[![Commit changes](/static/images/community/editing/git/11-commit.png)](/static/images/community/editing/git/11-commit.png)
+        {% endimage %}
+    {% endcolumn %}
+
+    {% column %}
+        {% image "has-border" %}
+[![Commit message](/static/images/community/editing/git/12-commit-message.png)](/static/images/community/editing/git/12-commit-message.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}
+
+Once you've created your commit, click on the `Push origin` button at the top of the window. This will upload your
+changes to GitHub, where they can be viewed by anyone!
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image "has-border" %}
+[![Push changes](/static/images/community/editing/git/13-push.png)](/static/images/community/editing/git/13-push.png)
+        {% endimage %}
+    {% endcolumn %}
+
+    {% column %}
+        {% image "has-border" %}
+[![Done](/static/images/community/editing/git/14-done.png)](/static/images/community/editing/git/14-done.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}
+
+You can repeat this process as many times as you like as you continue to make changes. You don't have to push every
+commit individually, either - feel free to create a few commits and push them together if you prefer. We advise that
+you commit relatively often - this allows you to keep track of your changes over time - and, if something goes wrong,
+you'll more easily be able to roll back to a previous commit (you can do this from the `History` tab, but it's
+out of scope of this document.)
+
+## Submitting Changes for Inclusion
+
+If you need feedback from us, or you're happy with your changes, click the blue `Create Pull Request` button and
+the GitHub pull request page will open in a browser.
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image "has-border" %}
+[![Push changes](/static/images/community/editing/git/15-pr-button.png)](/static/images/community/editing/git/15-pr-button.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}
+
+Once you're on GitHub proper, give your pull request a title and a description. If possible, include screenshots of
+your work in the description, and explain what changes you made and why you made them. If you're still working on
+your submission then you can click the `Create draft PR` button, and your new pull request will be created and marked
+as a work-in-progress. Otherwise, if you're finished with your submission and are ready for feedback, click the
+`Create pull request` button.
+
+Once your pull request is open, we'll be notified, and we'll take a look at it as soon as we can! If you have any other
+changes to make, then you can continue to create and push commits - they'll be added to your pull request automatically.
+
+{% columns "is-desktop" %}
+    {% column %}
+        {% image "has-border" %}
+[![Push changes](/static/images/community/editing/git/16-create-pr.png)](/static/images/community/editing/git/16-create-pr.png)
+        {% endimage %}
+    {% endcolumn %}
+
+    {% column %}
+        {% image "has-border" %}
+[![Push changes](/static/images/community/editing/git/17-pr-created.png)](/static/images/community/editing/git/17-pr-created.png)
+        {% endimage %}
+    {% endcolumn %}
+{% endcolumns %}
+
+Thanks for your contribution! When one of us has time, we'll review your pull request and provide you with feedback if
+anything needs to be changed. When everyone's happy, your pull request will be merged - the changes you've made will be
+included with the site, and GitHub will automatically build it and deploy it for everyone to see!
