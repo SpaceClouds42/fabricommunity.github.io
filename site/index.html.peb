@@ -3,6 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block main %}
+<body class="line-numbers">
     <section class="hero is-light">
         <div class="hero-head">
             {# <img src="/static/images/logo.png" class="image"/>#}
@@ -105,4 +106,5 @@
     </main>
 
     {% include 'footer' %}
+</body>
 {% endblock %}

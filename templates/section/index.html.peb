@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block main %}
+<body class="line-numbers has-navbar-fixed-top">
     <aside class="sidebar" id="sidebar">
         {% include "section/sidebar" %}
     </aside>
@@ -23,4 +24,5 @@
             </section>
         </main>
     {% endblock %}
+</body>
 {% endblock %}

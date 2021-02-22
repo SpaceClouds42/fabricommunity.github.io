@@ -11,17 +11,17 @@ mess with it locally.
 
 {% import "inline/macros" %}
 
-{% embed "blocks/info" %}
-  {% block title %}Info admonition title!{% endblock %}
+{% message "info" %}
+  {% message_header %}Info admonition title!{% end_message_header %}
   
-  {% block body %}
+  {% message_body %}
 * This is a Markdown list placed within a message.
 * This is a Markdown list placed within a message.
 * This is a Markdown list placed within a message.
 * This is a Markdown list placed within a message.
 * This is a Markdown list placed within a message.
-  {% endblock %}
-{% endembed %}
+  {% end_message_body %}
+{% endmessage %}
 
 {{ button(url="https://google.com", text="Google", classes="is-warning", icon_name="far fa-globe", icon_classes="has-text-danger") }}
 {{ button(url="https://google.com", text="Google", classes="is-warning", icon_name="far fa-globe", icon_classes="has-text-danger") }}
