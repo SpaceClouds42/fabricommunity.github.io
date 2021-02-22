@@ -196,7 +196,7 @@ If you need feedback from us, or you're happy with your changes, click the blue 
 the GitHub pull request page will open in a browser.
 
 {% columns "is-desktop" %}
-    {% column %}
+    {% column "is-half is-offset-one-quarter" %}
         {% image "has-border" %}
 [![Push changes](/static/images/community/editing/git/15-pr-button.png)](/static/images/community/editing/git/15-pr-button.png)
         {% endimage %}
