@@ -53,8 +53,6 @@ differs slightly from what many editors consider "standard" Markdown.
 
 ## Editing Tips
 
-{# TODO: Move dialects section to requirements section in editing document #}
-
 * **Try to write in a formal manner.** This means writing paragraphs instead of disjointed sentences, splitting your
     documents into sections using headers, and using correct punctuation and grammar. If you're not a native English
     speaker, don't worry - we'll work with you to improve your documents if required, and we're happy to make
@@ -63,6 +61,3 @@ differs slightly from what many editors consider "standard" Markdown.
     [LanguageTool](https://languagetool.org/) or another grammar/spelling checker**. Everyone makes mistakes, and this
     will help to ensure that all of our documents have a consistent style and tone. If a document doesn't seem to match
     up, we'll do this ourselves in the review process and let you know what should be changed.
-* We do not enforce an English dialect site-wide, but we do require that you use **the same English dialect across a
-    single document**. If a document starts off using UK English, then it should be entirely written in UK English.
-    Additionally, we will not accept contributions that change the English dialect of an existing document.

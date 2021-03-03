@@ -21,6 +21,14 @@ The repository is structured in a specific way:
   and you can learn more about working with them on the [templating and design page](/community/editing/templates) if 
   you wish to work with the site's design.
 
+Documents may be written in one of three formats:
+
+* **Markdown with Pebble templating**, ending in either `.md` or `.md.peb` - we'll focus on plain Markdown for this
+  document, but you can learn more about what Pebble templating gives you in the
+  [advanced formatting page](/community/editing/formatting).
+* **Plain HTML pages**, ending in `.html`
+* **HTML with Pebble templating**, ending in `.html.peb`
+
 ## Getting Started
 
 The vast majority of our documents are written in plain Markdown, which (mostly) follows the CommonMark standard. If
@@ -216,3 +224,7 @@ referred to using an absolute path - for example, `![alt text](/static/images/pa
 things organised, images should be placed within folders that match the path of the document they're used in, where
 possible - for example, if your document is in `site/community/editing/git.md` then your images should be in
 `static/images/community/editing/git/`.
+
+**Please note:** We do not enforce an English dialect site-wide, but we do require that you use **the same English
+dialect across a single document**. If a document starts off using UK English, then it should be entirely written in
+UK English. Additionally, we will not accept contributions that change the English dialect of an existing document.
