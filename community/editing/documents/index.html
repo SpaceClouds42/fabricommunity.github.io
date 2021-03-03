@@ -208,7 +208,7 @@
 
         <div class="navbar-item">
             <a class="button is-github"
-               href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/site/community/editing/documents.md"
+               href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/site/community/editing/documents.md.peb"
                target="_blank">
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Edit Page</span>
@@ -218,7 +218,205 @@
 </nav>
 
             <section class="content section">
-                            </section>
+                <h1 id="editing-documents"><a href="#editing-documents" id="editing-documents">Editing Documents</a></h1>
+<p>This site is generated using a set of templates, which are filled with content provided by a set of Markdown
+and HTML files. These files are stored within
+<a href="https://github.com/FabriCommunity/fabricommunity.github.io">a Git repository</a>, which you should fork and clone
+to get started - if you're new to working with Git or GitHub, please take a look at
+<a href="/community/editing/git">our Git basics tutorial</a>.</p>
+<p>The repository is structured in a specific way:</p>
+<ul>
+<li><code>/site</code> contains the site's content - Markdown and HTML files, and static files.
+<ul>
+<li><code>/site/static</code> contains the site's static files - images, CSS and JavaScript. If you need to add assets to
+be embedded within your documents, we prefer if you match the folder structure to keep things organised. For
+example, this page is located at <code>/site/community/editing/documents.md</code>, so its static files should all be
+placed within <code>/site/static/community/editing/documents/</code>.</li>
+</ul>
+</li>
+<li><code>/templates</code> contains a set of HTML templates that define the structure of each page. These are Pebble templates,
+and you can learn more about working with them on the <a href="/community/editing/templates">templating and design page</a> if
+you wish to work with the site's design.</li>
+</ul>
+<h2 id="getting-started"><a href="#getting-started" id="getting-started">Getting Started</a></h2>
+<p>The vast majority of our documents are written in plain Markdown, which (mostly) follows the CommonMark standard. If
+you're not familiar with Markdown, you should first check out
+<a href="https://commonmark.org/help/tutorial/">the CommonMark tutorial site</a> - it explains the basics of how to work with
+Markdown in a very easy-to-understand manner.</p>
+<p>We recommend the use of a programmer's text editor when working with the site. A great example of an easy-to-use editor
+is <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<h3 id="building-and-testing"><a href="#building-and-testing" id="building-and-testing">Building and Testing</a></h3>
+<p>The first thing you'll need to do is learn how to build and test the site. To make this easier, we've provided a
+number of simple scripts for you to make use of, for Linux, macOS and Windows.</p>
+<ul>
+<li><code>build.bat</code>/<code>build.sh</code> - Build the site and copy the built files into a single directory</li>
+<li><code>download.bat</code>/<code>download.sh</code> - Download the latest version of the static site generator</li>
+<li><code>serve.bat</code>/<code>serve.sh</code> - Run a simple web server, so you can test the site easily</li>
+</ul>
+<p>If you're using an editor that includes an integrated terminal, open it (in Visual Studio Code, you'll find that option
+in the <code>Terminal</code> menu at the top of the window). If not, open the terminal provided by your system (Command Prompt or
+Powershell on Windows) and change directory (using the <code>cd</code> command) to the folder containing your copy of the site.
+Using the <code>build</code> script as an example, you can run a script by typing the following and pressing the <code>Enter</code> key:</p>
+<ul>
+<li><strong>Command Prompt (Windows)</strong> - <code>build</code></li>
+<li><strong>PowerShell (Windows)</strong> - <code>./build.bat</code></li>
+<li><strong>Bash/ZSH (macOS/Linux)</strong> - <code>./build.sh</code> or <code>sh build.sh</code></li>
+</ul>
+<p>You will likely want to run the <code>serve</code> script first, and leave it running while you work. This will allow you to test
+the site easily - just run the <code>build</code> script when you make changes, and go to
+<a href="http://localhost:8080/">http://localhost:8080/</a> in your browser to see how your changes look.</p>
+<p>If your <code>build</code> script is outputting an error or the results the <code>serve</code> script give you don't look right, you can
+run the <code>download</code> script at any time to update your copy of the static site generator. Keeping this up to date
+is key, but you can keep an eye on the <code>#fabricomm-site</code> channel on Discord, where we'll post if the static site
+generator is updated.</p>
+<h3 id="creating-a-document"><a href="#creating-a-document" id="creating-a-document">Creating a Document</a></h3>
+<p>Creating a new document is quite simple. Simply create a new Markdown file (ending with <code>.md</code>) in the <code>site</code> directory,
+wherever the generated result should be on the site. For example, if you want a document to show up at
+<code>/community/editing/documents</code>, you would create <code>site/community/editing/documents.md</code>.</p>
+<p>If you have a collection of documents in a folder, you can create an <code>index</code> file that will be shown when you navigate
+to that folder. For example, <code>site/community/editing</code> contains multiple documents - so you would create
+<code>site/community/editing/index.md</code> and your document will show up at <code>/community/editing</code>.</p>
+<p><strong>Note:</strong> All filenames should use <code>lowered-kebab-case</code>. For example, instead of <code>persons_file.md</code> or
+<code>Persons-File.md</code>, use <code>persons-file.md</code>. We also recommend avoiding the use of non-alphanumeric characters so that
+filenames will match their URLs - so that's letters, numbers, and the dash (<code>-</code>) symbol.</p>
+<h3 id="front-matter"><a href="#front-matter" id="front-matter">Front Matter</a></h3>
+<p>All Markdown files <strong>must</strong> start with a front matter block. Front matter blocks contain information about the document,
+which is used by the static site generator (and the site's templates) to render the document. Front matter is written
+in YAML format, placed within two sets of triple-dashes (<code>---</code>).</p>
+<div class="columns ">
+<div class="column is-7">
+<h4 id="options"><a href="#options" id="options">Options</a></h4>
+<p>The <code>title</code> option is required, and must be present in every Markdown document.</p>
+<table class="table is-striped is-fullwidth">
+<thead>
+<tr><th align="left">Option</th><th align="center">Type</th><th align="left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td align="left"><code>title</code></td><td align="center">Text</td><td align="left">Page title, used in templates to show the title of the page in browser tabs and title bars</td></tr>
+<tr><td align="left"><code>authors</code></td><td align="center">List</td><td align="left">List of contributing authors, used in some templates</td></tr>
+<tr><td align="left"><code>template</code></td><td align="center">Text</td><td align="left">Name of a template, if this document doesn't use the normal one</td></tr>
+</tbody>
+</table>
+</div>
+<div class="column is-5">
+<h4 id="example"><a href="#example" id="example">Example</a></h4>
+<pre><code class="language-yaml">---
+title: My Document Title
+
+authors:
+  - Me
+  - Myself
+  - I
+
+template: section/index 
+---
+</code></pre>
+</div>
+</div>
+<h3 id="sections-and-navigation"><a href="#sections-and-navigation" id="sections-and-navigation">Sections and Navigation</a></h3>
+<p>The site is split up into the main pages, and a set of sections. This is done so that each section can have its own
+navigation, allowing for collections of documents to be navigated easily, in a way that any editor can specify.</p>
+<p>We currently have the following sections:</p>
+<ul>
+<li><strong>community</strong> - Information on our community, its policies, and how to edit this site</li>
+<li><strong>modding</strong> - Tutorials and programmer references, regarding creating your own Fabric mods</li>
+<li><strong>projects</strong> - Documentation and other information about community projects, including those created by other people</li>
+<li><strong>using</strong> - Articles and guides on using Fabric as a player, in an easy-to-understand format</li>
+</ul>
+<p>Sections are represented by folders in the <code>site/</code> folder. Each section may contain a <code>navigation.yml</code> file - this file
+contains the navigational structure of each section, in YAML format. Each entry in the navigation is represented by
+a node, which explains how the entry should look, and where it should link to.</p>
+<div class="columns ">
+<div class="column is-7">
+<h4 id="navigation-nodes"><a href="#navigation-nodes" id="navigation-nodes">Navigation Nodes</a></h4>
+<p>The <code>icon</code>, <code>path</code>, <code>title</code> and <code>type</code> options are required.</p>
+<table class="table is-striped is-fullwidth">
+<thead>
+<tr><th align="left">Option</th><th align="center">Type</th><th align="left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td align="left"><code>children</code></td><td align="center">List</td><td align="left">A list of nodes that exist as part of this one. Child nodes will not be shown unless the parent node is currently active, and may only be nested once - child nodes may not have their own children!</td></tr>
+<tr><td align="left"><code>description</code></td><td align="center">Text</td><td align="left">A short description explaining where the node links to</td></tr>
+<tr><td align="left"><code>icon</code></td><td align="center">Text</td><td align="left">The name and style class of a <a href="https://fontawesome.com/icons?d=gallery&amp;p=2">Font Awesome icon</a> to show next to this node - pro icons and styles may be used, not just free ones</td></tr>
+<tr><td align="left"><code>path</code></td><td align="center">List</td><td align="left">The page to link to - this can either be an absolute path to a document (eg <code>/community/editing/documents</code>), a static file (in <code>/static</code>), or a full URL (eg <code>https://google.com</code>) - If you're referring to a document in the current section, <strong>you should always use an absolute path that matches the url</strong></td></tr>
+<tr><td align="left"><code>title</code></td><td align="center">Text</td><td align="left">The name given to this node and displayed on the site</td></tr>
+<tr><td align="left"><code>type</code></td><td align="center">Text</td><td align="left">Set this to <code>node</code></td></tr>
+</tbody>
+</table>
+<h4 id="spacers"><a href="#spacers" id="spacers">Spacers</a></h4>
+<p>The <code>type</code> option is required. Providing <code>title</code> will turn this spacer into a title in the navigation, but you can omit
+it to create a horizontal line instead.</p>
+<table class="table is-striped is-fullwidth">
+<thead>
+<tr><th align="left">Option</th><th align="center">Type</th><th align="left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td align="left"><code>title</code></td><td align="center">Text</td><td align="left">Text to display for this spacer, which will turn it into a title in the navigation</td></tr>
+<tr><td align="left"><code>type</code></td><td align="center">Text</td><td align="left">Set this to <code>spacer</code></td></tr>
+</tbody>
+</table>
+</div>
+<div class="column is-5">
+<h4 id="example-1"><a href="#example-1" id="example-1">Example</a></h4>
+<pre><code class="language-yaml">nodes:
+  - type: node
+    icon: &quot;far fa-globe&quot;
+    path: /one
+    title: One
+
+  - type: spacer
+
+  - type: node
+    icon: &quot;fas fa-arrow-right&quot;
+    path: /two
+    title: Two
+
+    children:
+      - type: node
+        icon: &quot;fas fa-pen&quot;
+        path: /two/three
+        title: Three
+
+      - type: node
+        icon: &quot;fas fa-gavel&quot;
+        path: /two/four
+        title: Four
+
+  - type: spacer
+    title: Another Section
+
+  - type: node
+    icon: &quot;fas fa-text-size&quot;
+    path: /five
+    title: Five
+</code></pre>
+</div>
+</div>
+<h3 id="document-content"><a href="#document-content" id="document-content">Document Content</a></h3>
+<p>Once you've created your document and placed it in the navigation, you can start writing! Start your document with
+a top-level header that matches the title (eg <code># My Document</code>), and get writing!</p>
+<div class="columns ">
+<div class="column is-half is-offset-one-quarter">
+<article class="message is-danger">
+<div class="message-header ">
+<p>Code Licensing</p>
+</div>
+<div class="message-body ">
+<p><strong>You must have the rights to relicense all code examples you use in your contributions.</strong> This is because all code
+contributed to our site must be licensed under the
+<a href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/LICENSE-CC0.md">Creative Commons Zero License</a>,
+which effectively makes it public domain. If you have concerns about this policy, please contact one of the admins on
+Discord.</p>
+</div>
+</article>
+</div>
+</div>
+<p>If you need to add images for your documents, they should similarly be placed within the <code>static/images</code> folder, and
+referred to using an absolute path - for example, <code>![alt text](/static/images/path-to-file.png)</code>. In order to keep
+things organised, images should be placed within folders that match the path of the document they're used in, where
+possible - for example, if your document is in <code>site/community/editing/git.md</code> then your images should be in
+<code>static/images/community/editing/git/</code>.</p>
+            </section>
         </main>
     </body>
 </html>
