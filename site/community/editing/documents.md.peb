@@ -1,0 +1,218 @@
+---
+title: Editing Documents
+---
+
+# Editing Documents
+
+This site is generated using a set of templates, which are filled with content provided by a set of Markdown
+and HTML files. These files are stored within 
+[a Git repository](https://github.com/FabriCommunity/fabricommunity.github.io), which you should fork and clone
+to get started - if you're new to working with Git or GitHub, please take a look at 
+[our Git basics tutorial](/community/editing/git).
+
+The repository is structured in a specific way:
+
+* `/site` contains the site's content - Markdown and HTML files, and static files.
+    * `/site/static` contains the site's static files - images, CSS and JavaScript. If you need to add assets to
+      be embedded within your documents, we prefer if you match the folder structure to keep things organised. For
+      example, this page is located at `/site/community/editing/documents.md`, so its static files should all be
+      placed within `/site/static/community/editing/documents/`.
+* `/templates` contains a set of HTML templates that define the structure of each page. These are Pebble templates,
+  and you can learn more about working with them on the [templating and design page](/community/editing/templates) if 
+  you wish to work with the site's design.
+
+## Getting Started
+
+The vast majority of our documents are written in plain Markdown, which (mostly) follows the CommonMark standard. If
+you're not familiar with Markdown, you should first check out 
+[the CommonMark tutorial site](https://commonmark.org/help/tutorial/) - it explains the basics of how to work with
+Markdown in a very easy-to-understand manner.
+
+We recommend the use of a programmer's text editor when working with the site. A great example of an easy-to-use editor
+is [Visual Studio Code](https://code.visualstudio.com/).
+
+### Building and Testing
+
+The first thing you'll need to do is learn how to build and test the site. To make this easier, we've provided a
+number of simple scripts for you to make use of, for Linux, macOS and Windows.
+
+* `build.bat`/`build.sh` - Build the site and copy the built files into a single directory
+* `download.bat`/`download.sh` - Download the latest version of the static site generator
+* `serve.bat`/`serve.sh` - Run a simple web server, so you can test the site easily
+
+If you're using an editor that includes an integrated terminal, open it (in Visual Studio Code, you'll find that option
+in the `Terminal` menu at the top of the window). If not, open the terminal provided by your system (Command Prompt or 
+Powershell on Windows) and change directory (using the `cd` command) to the folder containing your copy of the site.
+Using the `build` script as an example, you can run a script by typing the following and pressing the `Enter` key:
+
+* **Command Prompt (Windows)** - `build`
+* **PowerShell (Windows)** - `./build.bat`
+* **Bash/ZSH (macOS/Linux)** - `./build.sh` or `sh build.sh`
+
+You will likely want to run the `serve` script first, and leave it running while you work. This will allow you to test
+the site easily - just run the `build` script when you make changes, and go to 
+[http://localhost:8080/](http://localhost:8080/) in your browser to see how your changes look.
+
+If your `build` script is outputting an error or the results the `serve` script give you don't look right, you can
+run the `download` script at any time to update your copy of the static site generator. Keeping this up to date
+is key, but you can keep an eye on the `#fabricomm-site` channel on Discord, where we'll post if the static site
+generator is updated.
+
+### Creating a Document
+
+Creating a new document is quite simple. Simply create a new Markdown file (ending with `.md`) in the `site` directory,
+wherever the generated result should be on the site. For example, if you want a document to show up at 
+`/community/editing/documents`, you would create `site/community/editing/documents.md`.
+
+If you have a collection of documents in a folder, you can create an `index` file that will be shown when you navigate
+to that folder. For example, `site/community/editing` contains multiple documents - so you would create
+`site/community/editing/index.md` and your document will show up at `/community/editing`.
+
+**Note:** All filenames should use `lowered-kebab-case`. For example, instead of `persons_file.md` or
+`Persons-File.md`, use `persons-file.md`. We also recommend avoiding the use of non-alphanumeric characters so that
+filenames will match their URLs - so that's letters, numbers, and the dash (`-`) symbol.
+
+### Front Matter
+
+All Markdown files **must** start with a front matter block. Front matter blocks contain information about the document,
+which is used by the static site generator (and the site's templates) to render the document. Front matter is written
+in YAML format, placed within two sets of triple-dashes (`---`).
+
+{% columns %}
+    {% column "is-7" %}
+#### Options
+
+The `title` option is required, and must be present in every Markdown document.
+
+Option     | Type | Description
+:--------- | :--: | :----------
+`title`    | Text | Page title, used in templates to show the title of the page in browser tabs and title bars
+`authors`  | List | List of contributing authors, used in some templates
+`template` | Text | Name of a template, if this document doesn't use the normal one
+    {% endcolumn %}
+
+    {% column "is-5" %}
+#### Example
+
+```yaml
+---
+title: My Document Title
+
+authors:
+  - Me
+  - Myself
+  - I
+
+template: section/index 
+---
+```
+    {% endcolumn %}
+{% endcolumns %}
+
+### Sections and Navigation
+
+The site is split up into the main pages, and a set of sections. This is done so that each section can have its own
+navigation, allowing for collections of documents to be navigated easily, in a way that any editor can specify.
+
+We currently have the following sections:
+
+* **community** - Information on our community, its policies, and how to edit this site
+* **modding** - Tutorials and programmer references, regarding creating your own Fabric mods
+* **projects** - Documentation and other information about community projects, including those created by other people
+* **using** - Articles and guides on using Fabric as a player, in an easy-to-understand format
+
+Sections are represented by folders in the `site/` folder. Each section may contain a `navigation.yml` file - this file
+contains the navigational structure of each section, in YAML format. Each entry in the navigation is represented by
+a node, which explains how the entry should look, and where it should link to.
+
+{% columns %}
+    {% column "is-7" %}
+#### Navigation Nodes
+
+The `icon`, `path`, `title` and `type` options are required.
+
+Option        | Type | Description
+:------------ | :--: | :----------
+`children`    | List | A list of nodes that exist as part of this one. Child nodes will not be shown unless the parent node is currently active, and may only be nested once - child nodes may not have their own children!
+`description` | Text | A short description explaining where the node links to
+`icon`        | Text | The name and style class of a [Font Awesome icon](https://fontawesome.com/icons?d=gallery&p=2) to show next to this node - pro icons and styles may be used, not just free ones
+`path`        | List | The page to link to - this can either be an absolute path to a document (eg `/community/editing/documents`), a static file (in `/static`), or a full URL (eg `https://google.com`) - If you're referring to a document in the current section, **you should always use an absolute path that matches the url**
+`title`       | Text | The name given to this node and displayed on the site
+`type`        | Text | Set this to `node`
+
+#### Spacers
+
+The `type` option is required. Providing `title` will turn this spacer into a title in the navigation, but you can omit
+it to create a horizontal line instead.
+
+Option  | Type | Description
+:------ | :--: | :----------
+`title` | Text | Text to display for this spacer, which will turn it into a title in the navigation
+`type`  | Text | Set this to `spacer`
+    {% endcolumn %}
+
+    {% column "is-5" %}
+#### Example
+
+```yaml
+nodes:
+  - type: node
+    icon: "far fa-globe"
+    path: /one
+    title: One
+
+  - type: spacer
+
+  - type: node
+    icon: "fas fa-arrow-right"
+    path: /two
+    title: Two
+
+    children:
+      - type: node
+        icon: "fas fa-pen"
+        path: /two/three
+        title: Three
+
+      - type: node
+        icon: "fas fa-gavel"
+        path: /two/four
+        title: Four
+
+  - type: spacer
+    title: Another Section
+
+  - type: node
+    icon: "fas fa-text-size"
+    path: /five
+    title: Five
+```
+    {% endcolumn %}
+{% endcolumns %}
+
+### Document Content
+
+Once you've created your document and placed it in the navigation, you can start writing! Start your document with
+a top-level header that matches the title (eg `# My Document`), and get writing!
+
+{% columns %}
+    {% column "is-half is-offset-one-quarter" %}
+        {% message "is-danger" %}
+            {% message_header %}Code Licensing{% end_message_header %}
+
+            {% message_body %}
+**You must have the rights to relicense all code examples you use in your contributions.** This is because all code
+contributed to our site must be licensed under the
+[Creative Commons Zero License](https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/LICENSE-CC0.md),
+which effectively makes it public domain. If you have concerns about this policy, please contact one of the admins on
+Discord.
+            {% end_message_body %}
+        {% endmessage %}
+    {% endcolumn %}
+{% endcolumns %}
+
+If you need to add images for your documents, they should similarly be placed within the `static/images` folder, and
+referred to using an absolute path - for example, `![alt text](/static/images/path-to-file.png)`. In order to keep
+things organised, images should be placed within folders that match the path of the document they're used in, where
+possible - for example, if your document is in `site/community/editing/git.md` then your images should be in
+`static/images/community/editing/git/`.
