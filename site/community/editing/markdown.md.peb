@@ -1,0 +1,378 @@
+---
+title: Advanced Markdown
+---
+
+{% import "inline/macros" %}
+
+# Advanced Markdown
+
+While the Markdown standard we adhere to is CommonMark, there are some differences between that and what we use. We
+make use of a library called [FlexMark](https://github.com/vsch/flexmark-java/), which provides a number of extensions
+and configurable options that we make use of. All of those extensions (and other changes) - and how to make use of
+them - is documented below.
+
+## Abbreviations
+
+{% buttons %}
+{{ button(
+    "https://github.com/vsch/flexmark-java/wiki/Extensions#abbreviation",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+The Abbreviations extension allows you to expand abbreviations in your documents, allowing users to hover them to
+see what the full text should be. This is especially helpful when talking about programming, as you'll often encounter
+lots of abbreviations.
+
+Your list of abbreviations will **not** be rendered anywhere in the document. Additionally, each document gets its own
+list of abbreviations - there is no shared list. Abbreviations throughout your document will be matched by name,
+even if they're placed after the definition - which is why you'll see that HTML and CSS have their definitions
+everywhere in this document.
+
+{% columns %}
+    {% column "is-two-thirds" %}
+### Markdown
+
+```text
+HTML is the standard markup language for documents designed to
+be displayed in a web browser. It can be assisted by technologies
+such as CSS and scripting languages such as JavaScript.
+
+*[HTML]: Hypertext Markup Language
+*[CSS]: Cascading Style Sheets
+```
+    {% endcolumn %}
+
+    {% column "is-one-third" %}
+### Output
+
+HTML is the standard markup language for documents designed to
+be displayed in a web browser. It can be assisted by technologies
+such as CSS and scripting languages such as JavaScript.
+
+*[HTML]: Hypertext Markup Language
+*[CSS]: Cascading Style Sheets
+    {% endcolumn %}
+{% endcolumns %}
+
+## Anchor Links
+
+{% buttons %}
+{{ button(
+    "https://github.com/vsch/flexmark-java/wiki/Extensions#anchorlink",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+The Anchor Link extension generates an ID for each header in your document, turning each header into a link that you
+can copy to direct someone to that specific header.
+
+You don't need to do anything special to achieve this - just use Markdown headers like you usually would. All the
+headers in this document are similarly linked.
+
+## Attributes
+
+{% buttons %}
+{{ button(
+"https://github.com/vsch/flexmark-java/wiki/Extensions#attributes",
+"Documentation",
+classes="is-black",
+icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+**Note:** This is an advanced extension. If you don't understand HTML or CSS, then feel free to skip this one - most
+writers will not need to use it.
+
+The Attributes extension provides a way to customize the HTML generated from your Markdown by adding attributes to
+the corresponding HTML element. There are several ways you can use this, although the primary use is for adding CSS
+classes to HTML elements.
+
+Attributes are placed within curly braces, and you can separate them with spaces if you'd like to add more than one
+of them. For attributes that contain quotes (`"`), you can include spaces within the quotes. They can be specified
+in one of the following ways:
+
+* `attribute=value-without-spaces`
+* `attribute="value with spaces"`
+* `#anchor` - Sets the `id` attribute to `anchor`
+* `.class-name` - Adds `class-name` to the `class` attribute
+
+If you specify an attribute multiple times, the following rules are followed:
+
+* `class` (or `.class-name`) values will be separated with spaces and placed together in the `class` attribute
+* `style` values will be separated with semicolons (`;`) and placed together in the `style` attribute
+* All other values will replace any previous values with the same name
+
+Remember to be careful about how you space out your attribute containers. If you find that your attributes are being
+applied to the whole paragraph, you may have placed a space before it - you need to place it **directly** after an
+inline element if you want it to apply!
+
+{% columns %}
+    {% column "is-two-thirds" %}
+### Markdown
+
+```markdown
+This line should be red. { .has-text-danger }
+
+This line should, instead, be blue. { .has-text-info }
+
+Let's make this link to Google into a button: [Google](https://google.com){ .button }
+```
+    {% endcolumn %}
+
+    {% column "is-one-third" %}
+### Output
+
+This line should be red. { .has-text-danger }
+
+This line should, instead, be blue. { .has-text-info }
+
+Let's make this link to Google into a button: [Google](https://google.com){ .button }
+    {% endcolumn %}
+{% endcolumns %}
+
+## Autolink
+
+{% buttons %}
+{{ button(
+"https://github.com/vsch/flexmark-java/wiki/Extensions#autolink",
+"Documentation",
+classes="is-black",
+icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+The Autolink extension takes plain links typed into the document - for example, https://google.com - and automatically
+turns them into clickable links. It's as simple as that!
+
+## Emoji
+
+{% buttons %}
+{{ button(
+"https://github.com/vsch/flexmark-java/wiki/Extensions#emoji",
+"Documentation",
+classes="is-black",
+icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+The Emoji extension looks for text formatted `:like-this:` and turns it into inline emoji images. This extension makes
+use of the shortcodes found at [the Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/), which can also
+be found [on GitHub](https://github.com/WebpageFX/emoji-cheat-sheet.com). You can also use the Unicode emoji directly.
+
+For example, `:+1:` will be turned into :+1:, `:stuck_out_tongue_winking_eye:` will be turned into
+:stuck_out_tongue_winking_eye:, and so on. Emoji will always render at the same size as the surrounding text.
+
+While we do have the capability to add custom emoji, we do not currently have any.
+
+## Indented Code Blocks
+
+In order to better facilitate the use of Pebble template blocks within Markdown files, you will be unable to create
+a code block by simply indenting the block of text. Instead, you should make use of fenced code blocks - in the same
+way you would on GitHub or Discord.
+
+For more information on fenced code blocks,
+[see GitHub's documentation](https://docs.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks).
+
+## HTML
+
+**Note:** This is an advanced concept. If you don't understand HTML or CSS, then feel free to skip this one - most
+writers will not need to use it.
+
+If what you want can't be expressed directly in Markdown or through the
+[extra formatting](/community/editing/formatting) provided by Pebble, then you can directly include HTML in your
+documents.
+
+The below example also showcases how you can set an aspect ratio for a div, if that's something you need.
+
+{% columns %}
+    {% column "is-two-thirds" %}
+### Markdown
+
+```html
+<div style="--aspect-ratio:16/9;">
+    <iframe src="https://www.youtube-nocookie.com/embed/Xy3VyprtBrw"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+    ></iframe>
+</div>
+```
+    {% endcolumn %}
+
+    {% column "is-one-third" %}
+### Output
+
+<div style="--aspect-ratio:16/9;">
+    <iframe src="https://www.youtube-nocookie.com/embed/Xy3VyprtBrw"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+    ></iframe>
+</div>
+
+    {% endcolumn %}
+{% endcolumns %}
+
+## Media Tags
+
+{% buttons %}
+{{ button(
+"https://github.com/vsch/flexmark-java/wiki/Extensions#media-tags",
+"Documentation",
+classes="is-black",
+icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+**Note:** This is an advanced extension. If you don't understand HTML, then feel free to skip this one - most
+writers will not need to use it.
+
+The Media Tags extension adds functionality to standard Markdown links, transforming them into rich HTML5 embeds. Four
+types of media are supported:
+
+* `!A[Text](link)` - Wraps the link within a HTML5 `<audio>` tag
+* `!E[Text](link)` - Wraps the link within a HTML5 `<embed>` tag
+* `!P[Text](link)` - Wraps the link within a HTML5 `<picture>` tag
+* `!V[Text](link)` - Wraps the link within a HTML5 `<video>` tag
+
+As always, ensure you have the rights to embed anything you use this for.
+
+{% columns %}
+    {% column "is-two-thirds" %}
+### Markdown
+
+```markdown
+[:link: Sound by Erokia](https://freesound.org/people/Erokia/sounds/561506/)
+
+!A[Audio embed](https://freesound.org/data/previews/561/561506_9497060-hq.mp3)
+
+Video by [asiekierka](https://asie.pl)
+
+!V[Fabric best](https://img.asie.pl/dTtp.mp4)
+```
+    {% endcolumn %}
+
+    {% column "is-one-third" %}
+### Output
+
+[:link: Sound by Erokia](https://freesound.org/people/Erokia/sounds/561506/)
+
+!A[Audio embed](https://freesound.org/data/previews/561/561506_9497060-hq.mp3)
+
+Video by [asiekierka](https://asie.pl)
+
+!V[Fabric best](https://img.asie.pl/dTtp.mp4)
+    {% endcolumn %}
+{% endcolumns %}
+
+## Strikethrough
+
+{% buttons %}
+{{ button(
+"https://github.com/vsch/flexmark-java/wiki/Extensions#gfm-strikethroughsubscript",
+"Documentation",
+classes="is-black",
+icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+The Strikethrough extension adds a Discord-style syntax for creating ~~strikethrough~~ text. Just use it how you would
+on Discord - `~~text goes here~~` will be rendered as ~~text goes here~~.
+
+## Table of Contents
+
+{% buttons %}
+{{ button(
+"https://github.com/vsch/flexmark-java/wiki/Table-of-Contents-Extension",
+"Documentation",
+classes="is-black",
+icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+The Table of Contents extension allows you to insert a table of contents into the page, which will be generated
+from the headers on the page. This is done simply, by placing `[TOC]` anywhere in your page. You can modify the output
+by including extra values within the brackets - for example, `[TOC numbered]` will result in a numbered table of
+contents. You can specify more than one option by separating them with spaces.
+
+* `bullet` - Use a bulleted list
+* `decreasing` - Use a flat, reverse-alphabetically-sorted list
+* `flat` - Use a list that places all headers at the same level
+* `formatted` - Include any inline formatting that's present in your headers
+* `hierarchy` - Use a list that includes sub-headers indented below their parent headers
+* `increasing` - Use a flat, alphabetically-sorted list
+* `levels=1,2,3` - Specify the header levels to include in the list
+* `numbered` - Use a numbered list
+* `reversed` - Reverse the order of the headers in the list
+* `text` - Remove any inline formatting that's present in your headers
+
+How you use this is up to you - if you have any suggestions for how this might be made nicer, please let us know!
+
+{% columns %}
+    {% column "is-two-thirds" %}
+### Markdown
+
+```markdown
+[TOC numbered hierarchy]
+```
+    {% endcolumn %}
+
+    {% column "is-one-third" %}
+### Output
+
+[TOC numbered hierarchy]
+    {% endcolumn %}
+{% endcolumns %}
+
+## Tables
+
+{% buttons %}
+{{ button(
+"https://github.com/vsch/flexmark-java/wiki/Tables-Extension",
+"Documentation",
+classes="is-black",
+icon_name="fab fa-github"
+) }}
+{% endbuttons %}
+
+The Tables extension allows you to insert tables into your document. It follows a similar style to GitHub's Markdown
+tables, with a few extra options - you may have multiple header rows, a different number of body and header columns,
+and column spans can be specified by adding consecutive pipes (`|`) at the end of the cell, with each pipe representing
+the number of columns to span.
+
+This is far easier explained with an example. Note that you can specify text alignment by adding colons (`:`) on either
+side of the dashed line below the header rows.
+
+{% columns %}
+    {% column "is-two-thirds" %}
+### Markdown
+
+```text
+| Left-aligned | Center-aligned | Right-aligned |
+| :----------- | :------------: | ------------: |
+| One          | One            | One           |
+| Two                          || One           |
+| One          | Two                           ||
+| Three                                       |||
+```
+    {% endcolumn %}
+
+    {% column "is-one-third" %}
+### Output
+
+**Note:** The colours below have been added to show you which column the text belongs to. It will not appear in the
+output by default, given the above markup.
+
+| Left-aligned { .has-text-danger } | Center-aligned { .has-text-success } | Right-aligned { .has-text-info } |
+| :-------------------------------- | :----------------------------------: | -------------------------------: |
+| One { .has-text-danger }          | One { .has-text-success }            | One { .has-text-info }           |
+| Two { .has-text-danger }                                                || One { .has-text-info }           |
+| One { .has-text-danger }          | Two { .has-text-success }                                              ||
+| Three { .has-text-danger }                                                                                |||
+    {% endcolumn %}
+{% endcolumns %}

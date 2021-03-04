@@ -25,7 +25,7 @@ Documents may be written in one of three formats:
 
 * **Markdown with Pebble templating**, ending in either `.md` or `.md.peb` - we'll focus on plain Markdown for this
   document, but you can learn more about what Pebble templating gives you in the
-  [advanced formatting page](/community/editing/formatting).
+  [extra formatting page](/community/editing/formatting).
 * **Plain HTML pages**, ending in `.html`
 * **HTML with Pebble templating**, ending in `.html.peb`
 

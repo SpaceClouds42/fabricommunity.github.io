@@ -17,6 +17,9 @@
     {# Icons: Font Awesome Pro #}
     <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
 
+    {# Emoji: Twemoji #}
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
     {% block head %}{% endblock %}
 </head>
 {% block main %}{% endblock %}

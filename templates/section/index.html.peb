@@ -19,10 +19,16 @@
         <main class="has-sidebar">
             {% include "section/navbar" %}
 
-            <section class="content section">
+            <section id="main-content" class="content section">
                 {{ body | raw }}
             </section>
         </main>
     {% endblock %}
+
+    <script type="application/javascript">
+        const mainElement = document.getElementById("main-content")
+
+        twemoji.parse(mainElement)
+    </script>
 </body>
 {% endblock %}
