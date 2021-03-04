@@ -374,28 +374,31 @@ writers will not need to use it.</p>
 <p>If what you want can't be expressed directly in Markdown or through the
 <a href="/community/editing/formatting">extra formatting</a> provided by Pebble, then you can directly include <abbr title="Hypertext Markup Language">HTML</abbr> in your
 documents.</p>
-<p>The below example also showcases how you can set an aspect ratio for a div, if that's something you need.</p>
+<p>The below example makes use of <abbr title="Cascading Style Sheets">CSS</abbr> classes available as part of the <a href="https://bulma.io/">Bulma CSS framework</a>, which
+we use heavily throughout the site.</p>
 <div class="columns ">
 <div class="column is-two-thirds">
 <h3 id="markdown-2"><a href="#markdown-2" id="markdown-2">Markdown</a></h3>
-<pre><code class="language-html">&lt;div style=&quot;--aspect-ratio:16/9;&quot;&gt;
+<pre><code class="language-html">&lt;figure class=&quot;image is-16by9 is-marginless&quot;&gt;
     &lt;iframe src=&quot;https://www.youtube-nocookie.com/embed/Xy3VyprtBrw&quot;
+            class=&quot;has-ratio&quot;
             frameborder=&quot;0&quot;
             allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;
             allowfullscreen
     &gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;/figure&gt;
 </code></pre>
 </div>
 <div class="column is-one-third">
 <h3 id="output-2"><a href="#output-2" id="output-2">Output</a></h3>
-<div style="--aspect-ratio:16/9;">
+<figure class="image is-16by9 is-marginless">
     <iframe src="https://www.youtube-nocookie.com/embed/Xy3VyprtBrw"
+            class="has-ratio"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
     ></iframe>
-</div>
+</figure>
 </div>
 </div>
 <h2 id="media-tags"><a href="#media-tags" id="media-tags">Media Tags</a></h2>
