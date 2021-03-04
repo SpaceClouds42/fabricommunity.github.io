@@ -187,33 +187,36 @@ If what you want can't be expressed directly in Markdown or through the
 [extra formatting](/community/editing/formatting) provided by Pebble, then you can directly include HTML in your
 documents.
 
-The below example also showcases how you can set an aspect ratio for a div, if that's something you need.
+The below example makes use of CSS classes available as part of the [Bulma CSS framework](https://bulma.io/), which
+we use heavily throughout the site.
 
 {% columns %}
     {% column "is-two-thirds" %}
 ### Markdown
 
 ```html
-<div style="--aspect-ratio:16/9;">
+<figure class="image is-16by9 is-marginless">
     <iframe src="https://www.youtube-nocookie.com/embed/Xy3VyprtBrw"
+            class="has-ratio"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
     ></iframe>
-</div>
+</figure>
 ```
     {% endcolumn %}
 
     {% column "is-one-third" %}
 ### Output
 
-<div style="--aspect-ratio:16/9;">
+<figure class="image is-16by9 is-marginless">
     <iframe src="https://www.youtube-nocookie.com/embed/Xy3VyprtBrw"
+            class="has-ratio"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
     ></iframe>
-</div>
+</figure>
 
     {% endcolumn %}
 {% endcolumns %}
