@@ -78,10 +78,10 @@ headers in this document are similarly linked.
 
 {% buttons %}
 {{ button(
-"https://github.com/vsch/flexmark-java/wiki/Extensions#attributes",
-"Documentation",
-classes="is-black",
-icon_name="fab fa-github"
+    "https://github.com/vsch/flexmark-java/wiki/Extensions#attributes",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
 ) }}
 {% endbuttons %}
 
@@ -111,6 +111,9 @@ Remember to be careful about how you space out your attribute containers. If you
 applied to the whole paragraph, you may have placed a space before it - you need to place it **directly** after an
 inline element if you want it to apply!
 
+**Note:** There are better ways to make buttons. You can read more about that on the
+[extra formatting](/community/editing/formatting) page.
+
 {% columns %}
     {% column "is-two-thirds" %}
 ### Markdown
@@ -139,10 +142,10 @@ Let's make this link to Google into a button: [Google](https://google.com){ .but
 
 {% buttons %}
 {{ button(
-"https://github.com/vsch/flexmark-java/wiki/Extensions#autolink",
-"Documentation",
-classes="is-black",
-icon_name="fab fa-github"
+    "https://github.com/vsch/flexmark-java/wiki/Extensions#autolink",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
 ) }}
 {% endbuttons %}
 
@@ -153,10 +156,10 @@ turns them into clickable links. It's as simple as that!
 
 {% buttons %}
 {{ button(
-"https://github.com/vsch/flexmark-java/wiki/Extensions#emoji",
-"Documentation",
-classes="is-black",
-icon_name="fab fa-github"
+    "https://github.com/vsch/flexmark-java/wiki/Extensions#emoji",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
 ) }}
 {% endbuttons %}
 
@@ -217,7 +220,6 @@ we use heavily throughout the site.
             allowfullscreen
     ></iframe>
 </figure>
-
     {% endcolumn %}
 {% endcolumns %}
 
@@ -225,10 +227,10 @@ we use heavily throughout the site.
 
 {% buttons %}
 {{ button(
-"https://github.com/vsch/flexmark-java/wiki/Extensions#media-tags",
-"Documentation",
-classes="is-black",
-icon_name="fab fa-github"
+    "https://github.com/vsch/flexmark-java/wiki/Extensions#media-tags",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
 ) }}
 {% endbuttons %}
 
@@ -277,10 +279,10 @@ Video by [asiekierka](https://asie.pl)
 
 {% buttons %}
 {{ button(
-"https://github.com/vsch/flexmark-java/wiki/Extensions#gfm-strikethroughsubscript",
-"Documentation",
-classes="is-black",
-icon_name="fab fa-github"
+    "https://github.com/vsch/flexmark-java/wiki/Extensions#gfm-strikethroughsubscript",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
 ) }}
 {% endbuttons %}
 
@@ -291,10 +293,10 @@ on Discord - `~~text goes here~~` will be rendered as ~~text goes here~~.
 
 {% buttons %}
 {{ button(
-"https://github.com/vsch/flexmark-java/wiki/Table-of-Contents-Extension",
-"Documentation",
-classes="is-black",
-icon_name="fab fa-github"
+    "https://github.com/vsch/flexmark-java/wiki/Table-of-Contents-Extension",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
 ) }}
 {% endbuttons %}
 
@@ -336,10 +338,10 @@ How you use this is up to you - if you have any suggestions for how this might b
 
 {% buttons %}
 {{ button(
-"https://github.com/vsch/flexmark-java/wiki/Tables-Extension",
-"Documentation",
-classes="is-black",
-icon_name="fab fa-github"
+    "https://github.com/vsch/flexmark-java/wiki/Tables-Extension",
+    "Documentation",
+    classes="is-black",
+    icon_name="fab fa-github"
 ) }}
 {% endbuttons %}
 
