@@ -15,6 +15,8 @@
 
         <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
 
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
             <script async src="/static/js/sidebar.js" type="application/javascript"></script>
 </head>
 <body class="line-numbers has-navbar-fixed-top">
@@ -170,7 +172,7 @@
     </div>
 </nav>
 
-            <section class="content section">
+            <section id="main-content" class="content section">
                 <h1 id="fabric-community-information"><a href="#fabric-community-information" id="fabric-community-information">Fabric Community Information</a></h1>
 <p>The Fabric Community is an unofficial community that provides a safe, friendly environment for people of all backgrounds
 to get together, socialize, talk about Fabric, and create Fabric mods. It aims to act as an alternative community that
@@ -190,5 +192,11 @@ challenges and attempt to overcome them. We're always interested in feedback, so
 <code>#discord-meta</code> (or via a private message) if you need anything!</p>
             </section>
         </main>
-    </body>
+    
+    <script type="application/javascript">
+        const mainElement = document.getElementById("main-content")
+
+        twemoji.parse(mainElement)
+    </script>
+</body>
 </html>

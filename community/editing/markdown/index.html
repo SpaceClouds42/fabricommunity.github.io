@@ -15,6 +15,8 @@
 
         <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
 
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
             <script async src="/static/js/sidebar.js" type="application/javascript"></script>
 </head>
 <body class="line-numbers has-navbar-fixed-top">
@@ -208,7 +210,7 @@
 
         <div class="navbar-item">
             <a class="button is-github"
-               href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/site/community/editing/markdown.md"
+               href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/site/community/editing/markdown.md.peb"
                target="_blank">
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Edit Page</span>
@@ -217,9 +219,377 @@
     </div>
 </nav>
 
-            <section class="content section">
+            <section id="main-content" class="content section">
                 <h1 id="advanced-markdown"><a href="#advanced-markdown" id="advanced-markdown">Advanced Markdown</a></h1>
+<p>While the Markdown standard we adhere to is CommonMark, there are some differences between that and what we use. We
+make use of a library called <a href="https://github.com/vsch/flexmark-java/">FlexMark</a>, which provides a number of extensions
+and configurable options that we make use of. All of those extensions (and other changes) - and how to make use of
+them - is documented below.</p>
+<h2 id="abbreviations"><a href="#abbreviations" id="abbreviations">Abbreviations</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Extensions#abbreviation" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p>The Abbreviations extension allows you to expand abbreviations in your documents, allowing users to hover them to
+see what the full text should be. This is especially helpful when talking about programming, as you'll often encounter
+lots of abbreviations.</p>
+<p>Your list of abbreviations will <strong>not</strong> be rendered anywhere in the document. Additionally, each document gets its own
+list of abbreviations - there is no shared list. Abbreviations throughout your document will be matched by name,
+even if they're placed after the definition - which is why you'll see that <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> have their definitions
+everywhere in this document.</p>
+<div class="columns ">
+<div class="column is-two-thirds">
+<h3 id="markdown"><a href="#markdown" id="markdown">Markdown</a></h3>
+<pre><code class="language-text">HTML is the standard markup language for documents designed to
+be displayed in a web browser. It can be assisted by technologies
+such as CSS and scripting languages such as JavaScript.
+
+*[HTML]: Hypertext Markup Language
+*[CSS]: Cascading Style Sheets
+</code></pre>
+</div>
+<div class="column is-one-third">
+<h3 id="output"><a href="#output" id="output">Output</a></h3>
+<p><abbr title="Hypertext Markup Language">HTML</abbr> is the standard markup language for documents designed to
+be displayed in a web browser. It can be assisted by technologies
+such as <abbr title="Cascading Style Sheets">CSS</abbr> and scripting languages such as JavaScript.</p>
+</div>
+</div>
+<h2 id="anchor-links"><a href="#anchor-links" id="anchor-links">Anchor Links</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Extensions#anchorlink" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p>The Anchor Link extension generates an ID for each header in your document, turning each header into a link that you
+can copy to direct someone to that specific header.</p>
+<p>You don't need to do anything special to achieve this - just use Markdown headers like you usually would. All the
+headers in this document are similarly linked.</p>
+<h2 id="attributes"><a href="#attributes" id="attributes">Attributes</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Extensions#attributes" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p><strong>Note:</strong> This is an advanced extension. If you don't understand <abbr title="Hypertext Markup Language">HTML</abbr> or <abbr title="Cascading Style Sheets">CSS</abbr>, then feel free to skip this one - most
+writers will not need to use it.</p>
+<p>The Attributes extension provides a way to customize the <abbr title="Hypertext Markup Language">HTML</abbr> generated from your Markdown by adding attributes to
+the corresponding <abbr title="Hypertext Markup Language">HTML</abbr> element. There are several ways you can use this, although the primary use is for adding <abbr title="Cascading Style Sheets">CSS</abbr>
+classes to <abbr title="Hypertext Markup Language">HTML</abbr> elements.</p>
+<p>Attributes are placed within curly braces, and you can separate them with spaces if you'd like to add more than one
+of them. For attributes that contain quotes (<code>&quot;</code>), you can include spaces within the quotes. They can be specified
+in one of the following ways:</p>
+<ul>
+<li><code>attribute=value-without-spaces</code></li>
+<li><code>attribute=&quot;value with spaces&quot;</code></li>
+<li><code>#anchor</code> - Sets the <code>id</code> attribute to <code>anchor</code></li>
+<li><code>.class-name</code> - Adds <code>class-name</code> to the <code>class</code> attribute</li>
+</ul>
+<p>If you specify an attribute multiple times, the following rules are followed:</p>
+<ul>
+<li><code>class</code> (or <code>.class-name</code>) values will be separated with spaces and placed together in the <code>class</code> attribute</li>
+<li><code>style</code> values will be separated with semicolons (<code>;</code>) and placed together in the <code>style</code> attribute</li>
+<li>All other values will replace any previous values with the same name</li>
+</ul>
+<p>Remember to be careful about how you space out your attribute containers. If you find that your attributes are being
+applied to the whole paragraph, you may have placed a space before it - you need to place it <strong>directly</strong> after an
+inline element if you want it to apply!</p>
+<div class="columns ">
+<div class="column is-two-thirds">
+<h3 id="markdown-1"><a href="#markdown-1" id="markdown-1">Markdown</a></h3>
+<pre><code class="language-markdown">This line should be red. { .has-text-danger }
+
+This line should, instead, be blue. { .has-text-info }
+
+Let's make this link to Google into a button: [Google](https://google.com){ .button }
+</code></pre>
+</div>
+<div class="column is-one-third">
+<h3 id="output-1"><a href="#output-1" id="output-1">Output</a></h3>
+<p class="has-text-danger">This line should be red.</p>
+<p class="has-text-info">This line should, instead, be blue.</p>
+<p>Let's make this link to Google into a button: <a href="https://google.com" class="button">Google</a></p>
+</div>
+</div>
+<h2 id="autolink"><a href="#autolink" id="autolink">Autolink</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Extensions#autolink" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p>The Autolink extension takes plain links typed into the document - for example, <a href="https://google.com">https://google.com</a> - and automatically
+turns them into clickable links. It's as simple as that!</p>
+<h2 id="emoji"><a href="#emoji" id="emoji">Emoji</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Extensions#emoji" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p>The Emoji extension looks for text formatted <code>:like-this:</code> and turns it into inline emoji images. This extension makes
+use of the shortcodes found at <a href="https://www.webfx.com/tools/emoji-cheat-sheet/">the Emoji Cheat Sheet</a>, which can also
+be found <a href="https://github.com/WebpageFX/emoji-cheat-sheet.com">on GitHub</a>. You can also use the Unicode emoji directly.</p>
+<p>For example, <code>:+1:</code> will be turned into 👍, <code>:stuck_out_tongue_winking_eye:</code> will be turned into
+😜, and so on. Emoji will always render at the same size as the surrounding text.</p>
+<p>While we do have the capability to add custom emoji, we do not currently have any.</p>
+<h2 id="indented-code-blocks"><a href="#indented-code-blocks" id="indented-code-blocks">Indented Code Blocks</a></h2>
+<p>In order to better facilitate the use of Pebble template blocks within Markdown files, you will be unable to create
+a code block by simply indenting the block of text. Instead, you should make use of fenced code blocks - in the same
+way you would on GitHub or Discord.</p>
+<p>For more information on fenced code blocks,
+<a href="https://docs.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks">see GitHub's documentation</a>.</p>
+<h2 id="html"><a href="#html" id="html"><abbr title="Hypertext Markup Language">HTML</abbr></a></h2>
+<p><strong>Note:</strong> This is an advanced concept. If you don't understand <abbr title="Hypertext Markup Language">HTML</abbr> or <abbr title="Cascading Style Sheets">CSS</abbr>, then feel free to skip this one - most
+writers will not need to use it.</p>
+<p>If what you want can't be expressed directly in Markdown or through the
+<a href="/community/editing/formatting">extra formatting</a> provided by Pebble, then you can directly include <abbr title="Hypertext Markup Language">HTML</abbr> in your
+documents.</p>
+<p>The below example also showcases how you can set an aspect ratio for a div, if that's something you need.</p>
+<div class="columns ">
+<div class="column is-two-thirds">
+<h3 id="markdown-2"><a href="#markdown-2" id="markdown-2">Markdown</a></h3>
+<pre><code class="language-html">&lt;div style=&quot;--aspect-ratio:16/9;&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube-nocookie.com/embed/Xy3VyprtBrw&quot;
+            frameborder=&quot;0&quot;
+            allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;
+            allowfullscreen
+    &gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+<div class="column is-one-third">
+<h3 id="output-2"><a href="#output-2" id="output-2">Output</a></h3>
+<div style="--aspect-ratio:16/9;">
+    <iframe src="https://www.youtube-nocookie.com/embed/Xy3VyprtBrw"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+    ></iframe>
+</div>
+</div>
+</div>
+<h2 id="media-tags"><a href="#media-tags" id="media-tags">Media Tags</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Extensions#media-tags" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p><strong>Note:</strong> This is an advanced extension. If you don't understand <abbr title="Hypertext Markup Language">HTML</abbr>, then feel free to skip this one - most
+writers will not need to use it.</p>
+<p>The Media Tags extension adds functionality to standard Markdown links, transforming them into rich HTML5 embeds. Four
+types of media are supported:</p>
+<ul>
+<li><code>!A[Text](link)</code> - Wraps the link within a HTML5 <code>&lt;audio&gt;</code> tag</li>
+<li><code>!E[Text](link)</code> - Wraps the link within a HTML5 <code>&lt;embed&gt;</code> tag</li>
+<li><code>!P[Text](link)</code> - Wraps the link within a HTML5 <code>&lt;picture&gt;</code> tag</li>
+<li><code>!V[Text](link)</code> - Wraps the link within a HTML5 <code>&lt;video&gt;</code> tag</li>
+</ul>
+<p>As always, ensure you have the rights to embed anything you use this for.</p>
+<div class="columns ">
+<div class="column is-two-thirds">
+<h3 id="markdown-3"><a href="#markdown-3" id="markdown-3">Markdown</a></h3>
+<pre><code class="language-markdown">[:link: Sound by Erokia](https://freesound.org/people/Erokia/sounds/561506/)
+
+!A[Audio embed](https://freesound.org/data/previews/561/561506_9497060-hq.mp3)
+
+Video by [asiekierka](https://asie.pl)
+
+!V[Fabric best](https://img.asie.pl/dTtp.mp4)
+</code></pre>
+</div>
+<div class="column is-one-third">
+<h3 id="output-3"><a href="#output-3" id="output-3">Output</a></h3>
+<p><a href="https://freesound.org/people/Erokia/sounds/561506/">🔗 Sound by Erokia</a></p>
+<p><audio title="Audio embed" controls=""><source src="https://freesound.org/data/previews/561/561506_9497060-hq.mp3" type="audio/mpeg" />Your browser does not support the audio element.</audio></p>
+<p>Video by <a href="https://asie.pl">asiekierka</a></p>
+<p><video title="Fabric best" controls=""><source src="https://img.asie.pl/dTtp.mp4" type="video/mp4" />Your browser does not support the video element.</video></p>
+</div>
+</div>
+<h2 id="strikethrough"><a href="#strikethrough" id="strikethrough">Strikethrough</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Extensions#gfm-strikethroughsubscript" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p>The Strikethrough extension adds a Discord-style syntax for creating <del>strikethrough</del> text. Just use it how you would
+on Discord - <code>~~text goes here~~</code> will be rendered as <del>text goes here</del>.</p>
+<h2 id="table-of-contents"><a href="#table-of-contents" id="table-of-contents">Table of Contents</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Table-of-Contents-Extension" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p>The Table of Contents extension allows you to insert a table of contents into the page, which will be generated
+from the headers on the page. This is done simply, by placing <code>[TOC]</code> anywhere in your page. You can modify the output
+by including extra values within the brackets - for example, <code>[TOC numbered]</code> will result in a numbered table of
+contents. You can specify more than one option by separating them with spaces.</p>
+<ul>
+<li><code>bullet</code> - Use a bulleted list</li>
+<li><code>decreasing</code> - Use a flat, reverse-alphabetically-sorted list</li>
+<li><code>flat</code> - Use a list that places all headers at the same level</li>
+<li><code>formatted</code> - Include any inline formatting that's present in your headers</li>
+<li><code>hierarchy</code> - Use a list that includes sub-headers indented below their parent headers</li>
+<li><code>increasing</code> - Use a flat, alphabetically-sorted list</li>
+<li><code>levels=1,2,3</code> - Specify the header levels to include in the list</li>
+<li><code>numbered</code> - Use a numbered list</li>
+<li><code>reversed</code> - Reverse the order of the headers in the list</li>
+<li><code>text</code> - Remove any inline formatting that's present in your headers</li>
+</ul>
+<p>How you use this is up to you - if you have any suggestions for how this might be made nicer, please let us know!</p>
+<div class="columns ">
+<div class="column is-two-thirds">
+<h3 id="markdown-4"><a href="#markdown-4" id="markdown-4">Markdown</a></h3>
+<pre><code class="language-markdown">[TOC numbered hierarchy]
+</code></pre>
+</div>
+<div class="column is-one-third">
+<h3 id="output-4"><a href="#output-4" id="output-4">Output</a></h3>
+<ol>
+<li><a href="#abbreviations">Abbreviations</a>
+<ol>
+<li><a href="#markdown">Markdown</a></li>
+<li><a href="#output">Output</a></li>
+</ol>
+</li>
+<li><a href="#anchor-links">Anchor Links</a></li>
+<li><a href="#attributes">Attributes</a>
+<ol>
+<li><a href="#markdown-1">Markdown</a></li>
+<li><a href="#output-1">Output</a></li>
+</ol>
+</li>
+<li><a href="#autolink">Autolink</a></li>
+<li><a href="#emoji">Emoji</a></li>
+<li><a href="#indented-code-blocks">Indented Code Blocks</a></li>
+<li><a href="#html"><abbr title="Hypertext Markup Language">HTML</abbr></a>
+<ol>
+<li><a href="#markdown-2">Markdown</a></li>
+<li><a href="#output-2">Output</a></li>
+</ol>
+</li>
+<li><a href="#media-tags">Media Tags</a>
+<ol>
+<li><a href="#markdown-3">Markdown</a></li>
+<li><a href="#output-3">Output</a></li>
+</ol>
+</li>
+<li><a href="#strikethrough">Strikethrough</a></li>
+<li><a href="#table-of-contents">Table of Contents</a>
+<ol>
+<li><a href="#markdown-4">Markdown</a></li>
+<li><a href="#output-4">Output</a></li>
+</ol>
+</li>
+<li><a href="#tables">Tables</a>
+<ol>
+<li><a href="#markdown-5">Markdown</a></li>
+<li><a href="#output-5">Output</a></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<h2 id="tables"><a href="#tables" id="tables">Tables</a></h2>
+<div class="buttons ">
+<p><a href="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" target="_blank" class="button is-black">
+<span class="icon-text">
+<span class="icon ">
+<i class="fab fa-github"></i>
+</span>
+<span>
+Documentation        </span>
+</span>
+</a></p>
+</div>
+<p>The Tables extension allows you to insert tables into your document. It follows a similar style to GitHub's Markdown
+tables, with a few extra options - you may have multiple header rows, a different number of body and header columns,
+and column spans can be specified by adding consecutive pipes (<code>|</code>) at the end of the cell, with each pipe representing
+the number of columns to span.</p>
+<p>This is far easier explained with an example. Note that you can specify text alignment by adding colons (<code>:</code>) on either
+side of the dashed line below the header rows.</p>
+<div class="columns ">
+<div class="column is-two-thirds">
+<h3 id="markdown-5"><a href="#markdown-5" id="markdown-5">Markdown</a></h3>
+<pre><code class="language-text">| Left-aligned | Center-aligned | Right-aligned |
+| :----------- | :------------: | ------------: |
+| One          | One            | One           |
+| Two                          || One           |
+| One          | Two                           ||
+| Three                                       |||
+</code></pre>
+</div>
+<div class="column is-one-third">
+<h3 id="output-5"><a href="#output-5" id="output-5">Output</a></h3>
+<p><strong>Note:</strong> The colours below have been added to show you which column the text belongs to. It will not appear in the
+output by default, given the above markup.</p>
+<table class="table is-striped is-fullwidth">
+<thead>
+<tr><th align="left"><span class="has-text-danger">Left-aligned </span></th><th align="center"><span class="has-text-success">Center-aligned </span></th><th align="right"><span class="has-text-info">Right-aligned </span></th></tr>
+</thead>
+<tbody>
+<tr><td align="left"><span class="has-text-danger">One </span></td><td align="center"><span class="has-text-success">One </span></td><td align="right"><span class="has-text-info">One </span></td></tr>
+<tr><td align="left" colspan="2"><span class="has-text-danger">Two </span></td><td align="right"><span class="has-text-info">One </span></td></tr>
+<tr><td align="left"><span class="has-text-danger">One </span></td><td align="center" colspan="2"><span class="has-text-success">Two </span></td></tr>
+<tr><td align="left" colspan="3"><span class="has-text-danger">Three </span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
             </section>
         </main>
-    </body>
+    
+    <script type="application/javascript">
+        const mainElement = document.getElementById("main-content")
+
+        twemoji.parse(mainElement)
+    </script>
+</body>
 </html>

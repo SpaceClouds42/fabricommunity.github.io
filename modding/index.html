@@ -15,6 +15,8 @@
 
         <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
 
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
             <script async src="/static/js/sidebar.js" type="application/javascript"></script>
 </head>
 <body class="line-numbers has-navbar-fixed-top">
@@ -196,7 +198,7 @@
     </div>
 </nav>
 
-            <section class="content section">
+            <section id="main-content" class="content section">
                 <h1 id="fabric-community-documentation"><a href="#fabric-community-documentation" id="fabric-community-documentation">Fabric Community Documentation</a></h1>
 <p>Welcome to the Fabric Community Documentation. The documentation are open sourced markdown-based documentation that can
 help you learn how to utilize the Fabric Modloader and community made libraries to make your mod!</p>
@@ -211,5 +213,11 @@ help you learn how to utilize the Fabric Modloader and community made libraries 
 <p>You can checkout the <a href="">GitHub for the Contributing Guide</a>, and <a href="">our discord to chat about your changes.</a></p>
             </section>
         </main>
-    </body>
+    
+    <script type="application/javascript">
+        const mainElement = document.getElementById("main-content")
+
+        twemoji.parse(mainElement)
+    </script>
+</body>
 </html>

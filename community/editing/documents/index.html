@@ -15,6 +15,8 @@
 
         <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
 
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
             <script async src="/static/js/sidebar.js" type="application/javascript"></script>
 </head>
 <body class="line-numbers has-navbar-fixed-top">
@@ -217,7 +219,7 @@
     </div>
 </nav>
 
-            <section class="content section">
+            <section id="main-content" class="content section">
                 <h1 id="editing-documents"><a href="#editing-documents" id="editing-documents">Editing Documents</a></h1>
 <p>This site is generated using a set of templates, which are filled with content provided by a set of Markdown
 and HTML files. These files are stored within
@@ -242,7 +244,7 @@ you wish to work with the site's design.</li>
 <ul>
 <li><strong>Markdown with Pebble templating</strong>, ending in either <code>.md</code> or <code>.md.peb</code> - we'll focus on plain Markdown for this
 document, but you can learn more about what Pebble templating gives you in the
-<a href="/community/editing/formatting">advanced formatting page</a>.</li>
+<a href="/community/editing/formatting">extra formatting page</a>.</li>
 <li><strong>Plain HTML pages</strong>, ending in <code>.html</code></li>
 <li><strong>HTML with Pebble templating</strong>, ending in <code>.html.peb</code></li>
 </ul>
@@ -429,5 +431,11 @@ dialect across a single document</strong>. If a document starts off using UK Eng
 UK English. Additionally, we will not accept contributions that change the English dialect of an existing document.</p>
             </section>
         </main>
-    </body>
+    
+    <script type="application/javascript">
+        const mainElement = document.getElementById("main-content")
+
+        twemoji.parse(mainElement)
+    </script>
+</body>
 </html>

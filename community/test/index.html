@@ -15,6 +15,8 @@
 
         <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
 
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
             <script async src="/static/js/sidebar.js" type="application/javascript"></script>
 </head>
 <body class="line-numbers has-navbar-fixed-top">
@@ -170,7 +172,7 @@
     </div>
 </nav>
 
-            <section class="content section">
+            <section id="main-content" class="content section">
                 <h1 id="markup-testing-document"><a href="#markup-testing-document" id="markup-testing-document">Markup Testing Document</a></h1>
 <p>This document exists as a simple testbed for this site's markup and templating logic. Feel free to edit this file and
 mess with it locally.</p>
@@ -215,5 +217,11 @@ Simpler Button        </span>
 </a></p>
             </section>
         </main>
-    </body>
+    
+    <script type="application/javascript">
+        const mainElement = document.getElementById("main-content")
+
+        twemoji.parse(mainElement)
+    </script>
+</body>
 </html>
