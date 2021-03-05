@@ -178,7 +178,7 @@
 
 .icon-text {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
