@@ -17,7 +17,9 @@
     <ul class="menu-list">
         {% for node in navigation.nodes %}
             {% if node.type == "node" %}
-                <li>
+                <li {% if navigation.currentPath == node.path %}class="is-active"{% endif %}>
+{#                    <code>{{ navigation.currentPath }}</code> <br /> <code>-> {{ node.path }}</code>#}
+
                     {% if node.children.size >= 1 %}
                         <a class="{% if node.path == navigation.currentPath %}is-active{%endif%}" href="{{ node.path }}">
                             <span class="icon-text">
