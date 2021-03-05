@@ -1,2 +1,0 @@
-
-<a href="{% block url %}{% endblock %}" class="button {% block classes %}{% endblock %}">{% block text %}{% endblock %}</a>

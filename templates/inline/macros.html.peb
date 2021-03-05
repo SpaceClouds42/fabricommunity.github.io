@@ -73,15 +73,12 @@
     {% else %}
         <a href="{{ url }}"
     {% endif %}
-
-    class="is-{{ size }}
-        {% if not style is null %} is-{{ style }}{% endif %}
-        {% if rounded %} is-rounded{% endif %} ">
-
+    class="tag is-{{ size }}
+        {% if style is not null %} is-{{ style }}{% endif %}
+        {% if rounded %} is-rounded{% endif %} "> {{ text }}
     {% if url is null %}
         </span>
     {% else %}
         </a>
     {% endif %}
-
 {% endmacro %}

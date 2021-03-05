@@ -1,2 +1,0 @@
-
-<span class="icon-text"><span class="icon{% block classes %}{% endblock %}"><i class="{% block icon %}{% endblock %}"></i></span><span>{% block text %}{% endblock %}</span></span>

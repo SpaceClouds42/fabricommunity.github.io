@@ -387,3 +387,7 @@ code .token.tag {
     height: 1rem;
     width: auto;
 }
+
+.breadcrumb ul li:first-of-type {
+    margin-top: 0.25em;
+}
