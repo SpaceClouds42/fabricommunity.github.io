@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Fabric Community | Fabric Community Documentation</title>
+    <title>Fabric Community | Uploading Log Files</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,9 +37,9 @@
     </p>
 
     <ul class="menu-list">
-                                    <li class="is-active">
+                                    <li >
 
-                                            <a class="is-active" href="/using">
+                                            <a class="" href="/using">
                             <span class="icon-text">
                                                                     <span class="icon"><i class="fas fa-home fa-fw"></i></span>
                                 
@@ -53,9 +53,9 @@
                         Getting help                    </p>
                 
                 <ul class="menu-list">
-                                                <li >
+                                                <li class="is-active">
 
-                                            <a class="" href="/using/logs">
+                                            <a class="is-active" href="/using/logs">
                             <span class="icon-text">
                                                                     <span class="icon"><i class="fas fa-file fa-fw"></i></span>
                                 
@@ -117,7 +117,7 @@
 
         <div class="navbar-item">
             <a class="button is-github"
-               href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/site/using.md"
+               href="https://github.com/FabriCommunity/fabricommunity.github.io/blob/root/site/using/logs.md"
                target="_blank">
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Edit Page</span>
@@ -127,18 +127,39 @@
 </nav>
 
             <section id="main-content" class="content section">
-                <h1 id="fabric-community-documentation"><a href="#fabric-community-documentation" id="fabric-community-documentation">Fabric Community Documentation</a></h1>
-<p>Welcome to the Fabric Community Documentation. The documentation are open sourced markdown-based documentation that can
-help you learn how to utilize the Fabric Modloader and community made libraries to make your mod!</p>
-<h2 id="where-can-i-start"><a href="#where-can-i-start" id="where-can-i-start">Where can I start?</a></h2>
-<p>Here are some great places to get started!</p>
+                <h1 id="uploading-log-files"><a href="#uploading-log-files" id="uploading-log-files">Uploading Log Files</a></h1>
+<p>To get help, you should provide a log file. This file provides essential information to find out why Minecraft has crashed.<br />
+Please follow the relevant tutorial for the launcher you're using. If you are unsure about this, follow the standard launcher tutorial.</p>
+<h2 id="getting-the-log-file"><a href="#getting-the-log-file" id="getting-the-log-file">Getting the log file</a></h2>
+<hr />
+<h3 id="standard-launcher"><a href="#standard-launcher" id="standard-launcher">Standard Launcher</a></h3>
+<ol>
+<li><strong>Open the minecraft launcher and go to the &quot;Installations&quot; tab.</strong><br />
+<a href="/static/images/using/logs/vanilla-launcher-open-installations-tab.png"><img src="/static/images/using/logs/vanilla-launcher-open-installations-tab.png" alt="Installations tab" /></a></li>
+<li><strong>Open the relevant installation's folder.</strong><br />
+<a href="/static/images/using/logs/vanilla-launcher-open-installation-folder.png"><img src="/static/images/using/logs/vanilla-launcher-open-installation-folder.png" alt="Installation folder" /></a></li>
+<li>
 <ul>
-<li><a href="tutorial">Making your first Fabric mod</a></li>
-<li><a href="migrating-from-forge">Migrating from Forge</a></li>
-<li><a href="textures">Texture Making</a></li>
+<li><strong>The last time I launched Minecraft it crashed:</strong> Open the <code>logs</code> folder and upload the <code>latest.log</code> file. <a href="#uploading-your-log-file">See &quot;uploading the log&quot;</a></li>
+<li><strong>I have opened Minecraft since:</strong> Open the <code>crash-reports</code> folder and upload the relevant file. This directory only contains crashes. <a href="#uploading-your-log-file">See &quot;uploading the log&quot;</a></li>
 </ul>
-<h2 id="i-want-to-help"><a href="#i-want-to-help" id="i-want-to-help">I want to help!</a></h2>
-<p>You can checkout the <a href="">GitHub for the Contributing Guide</a>, and <a href="">our discord to chat about your changes.</a></p>
+</li>
+</ol>
+<h3 id="multimc"><a href="#multimc" id="multimc">MultiMC</a></h3>
+<ol>
+<li><strong>Press the <code>upload</code> button on the upper right of the screen that pops up once you launch the game.</strong><br />
+<em>If you have closed this window, press <code>edit instance</code> &gt; <code>minecraft log</code> (if this doesn't appear, press <code>other logs</code> and select <code>latest.log</code>). Here you should find the upload button</em></li>
+<li><strong>You can now simply paste the link MultiMc gives you. It should be on your clipboard already.</strong></li>
+</ol>
+<h2 id="uploading-your-log-file"><a href="#uploading-your-log-file" id="uploading-your-log-file">Uploading your log file</a></h2>
+<hr />
+<p>Please <strong>upload your log to a paste site</strong> instead of uploading it directly, this makes it much easier to work with. Common paste sites include:</p>
+<ul>
+<li><a href="https://paste.gg/">paste.gg</a> 1MiB limit, no account needed</li>
+<li><a href="https://paste.ee/">paste.ee</a> 1MiB limit, no account needed</li>
+<li><a href="https://pastebin.com/">pastebin</a> 512KiB limit, no account needed</li>
+<li><a href="https://paste.ee/">Github gists</a> 100MiB limit, account needed</li>
+</ul>
             </section>
         </main>
     
