@@ -12,19 +12,13 @@ nodes:
 
     title: "Rules"
     path: "/community/rules"
-    icon: "fas fa-book-user"
-
-  - type: "node"
-
-    title: "Getting Help"
-    path: "/community/help"
-    icon: "fas fa-exclamation-triangle"
+    icon: "fas fa-book"
 
   - type: "node"
 
     title: "Code of Conduct"
     path: "/community/code-of-conduct"
-    icon: "fas fa-file-alt"
+    icon: "fas fa-scroll"
 
   - type: "node"
 

@@ -1,4 +1,5 @@
 <div class="footer-container has-text-centered is-small">
+    {% if lastCommit %}<strong>Last edit:</strong> {{ lastCommit }}{% endif %}
     <div class="divider"></div>
 
     <p>

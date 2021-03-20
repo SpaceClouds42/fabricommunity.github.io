@@ -1,5 +1,5 @@
 ---
-title: Moderation
+title: Moderation Policy
 ---
 
-# Moderation
+# Moderation Policy
