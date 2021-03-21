@@ -25,7 +25,7 @@ The Fabricomm Site also makes use of some other projects:
 
 * [Bulma](https://bulma.io) (the CSS framework) is licensed under the [MIT License](/LICENSE-BULMA).
 * [Bulma Prefers Dark](https://github.com/jloh/bulma-prefers-dark) is licensed under the [MIT License](/LICENSE-BULMA-PREFERS-DARK).
-* [CreativeBulma](https://github.com/CreativeBulma/) projects (collapsible, divider) are licensed under the [MIT License](/LICENSE-CREATIVEBULMA): `bulma-divider`
+* [CreativeBulma](https://github.com/CreativeBulma/) projects (divider) are licensed under the [MIT License](/LICENSE-CREATIVEBULMA): `bulma-divider`
 * [Prism](https://prismjs.com/) (the syntax highlighter) is licensed under the [MIT License](/LICENSE-PRISM).
 
 These projects do not belong to us - they're the property of their respective license holders.

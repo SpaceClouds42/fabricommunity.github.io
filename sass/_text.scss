@@ -7,3 +7,10 @@ h1, h2, h3, h4, h5, h6 {
     filter: opacity(80%);
   }
 }
+
+:not(pre) > code {
+  background-color: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0;
+}
