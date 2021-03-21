@@ -23,6 +23,6 @@
   },
   "scripts": {
     "css-build": "sass --style=compressed sass/index.scss site/static/css/index.css",
-    "js-build": "uglifyjs --compress --source-map -o site/static/js/index.js site/static/js/prism.js site/static/js/sidebar.js node_modules/@creativebulma/bulma-collapsible/dist/js/bulma-collapsible.min.js"
+    "js-build": "uglifyjs --compress --source-map -o site/static/js/index.js site/static/js/misc.js site/static/js/prism.js site/static/js/sidebar.js node_modules/@creativebulma/bulma-collapsible/dist/js/bulma-collapsible.min.js"
   }
 }
