@@ -15,6 +15,8 @@ terminal of choice.
 The static site generator requires that you have Java 8 or later installed.
 
 * `build` - Build the site, generating a copy in the `build` folder.
+* `build-assets` - Build the CSS and JS, generating a copy in the respective `site/static` folders - this requires `
+  node` and `npm` to be installed.
 * `download` - Download (or update) the static site generator. This is run automatically by the `build` script if
   `SSG.jar` is not present. If the scripts aren't working, you'll probably need to delete `SSG.jar` or just run this
   script yourself.

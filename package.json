@@ -1,0 +1,28 @@
+{
+  "name": "fabricommunity.github.io",
+  "version": "1.0.0",
+  "description": "Source files used to generate The Fabric Community's site.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabriCommunity/fabricommunity.github.io.git"
+  },
+  "private": true,
+  "author": "The Fabric Community",
+  "license": "CC BY-NC-SA",
+  "bugs": {
+    "url": "https://github.com/FabriCommunity/fabricommunity.github.io/issues"
+  },
+  "homepage": "https://github.com/FabriCommunity/fabricommunity.github.io#readme",
+  "dependencies": {
+    "@creativebulma/bulma-collapsible": "^1.0.4",
+    "@creativebulma/bulma-divider": "^1.1.0",
+    "bulma": "^0.9.2",
+    "bulma-prefers-dark": "0.1.0-beta.0",
+    "sass": "^1.32.8",
+    "uglify-js": "^3.13.1"
+  },
+  "scripts": {
+    "css-build": "sass --style=compressed sass/index.scss site/static/css/index.css",
+    "js-build": "uglifyjs --compress --source-map -o site/static/js/index.js site/static/js/prism.js site/static/js/sidebar.js node_modules/@creativebulma/bulma-collapsible/dist/js/bulma-collapsible.min.js"
+  }
+}

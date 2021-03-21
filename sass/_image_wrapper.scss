@@ -1,0 +1,52 @@
+/** Centering image wrapper **/
+
+.image-wrapper.has-border img {
+  border: 1px solid #7a7a7a;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.image-wrapper p {
+  display: block;
+  width: 100%;
+}
+
+@media(min-width: 1216px) {
+  .image-wrapper {
+    margin: auto;
+    width: 50%;
+  }
+
+  .column .image-wrapper {
+    margin: auto;
+    padding: unset;
+    width: 75%;
+  }
+}
+
+@media(max-width: 1215px) {
+  .image-wrapper {
+    margin: auto;
+    width: 75%;
+  }
+
+  .column .image-wrapper {
+    margin: auto;
+    padding: unset;
+    width: 100%;
+  }
+}
+
+@media(max-width: 1024px) {
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .column .image-wrapper {
+    margin: auto;
+    padding: unset;
+    width: 100%;
+  }
+}

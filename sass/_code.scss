@@ -1,0 +1,32 @@
+/** Code block stuff **/
+
+code .token.url {
+  color: #fd971f;
+}
+
+code .token.url .token.content {
+  color: #a6e22e;
+}
+
+code .token.url .token.url {
+  color: #66d9ef;
+}
+
+code .token.tag {
+  align-items: unset !important;
+  background-color: unset !important;
+  border-radius: unset !important;
+  display: unset !important;
+  font-size: unset !important;
+  height: unset !important;
+  justify-content: unset !important;
+  line-height: unset !important;
+  padding-left: unset !important;
+  padding-right: unset !important;
+  white-space: unset !important;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  padding-bottom: 0.75rem;
+  padding-top: 0.60rem;
+}

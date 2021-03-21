@@ -1,0 +1,72 @@
+@import "variables";
+
+@media (prefers-color-scheme: dark) {
+  .sidebar {
+    background-color: $dark-background-panel;
+
+    a {
+      color: $dark-text;
+    }
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color;
+  }
+
+  .sidebar-overlay {
+    background-color: $semi-transparent-white;
+  }
+
+  @media(max-width: 1024px) {
+    .sidebar.is-active {
+      background-color: $dark-background-panel;
+    }
+  }
+
+  .navbar.is-light {
+    background-color: $dark-background-panel;
+    color: $dark-text;
+
+    .navbar-burger {
+      color: $dark-text;
+    }
+  }
+
+  .navbar .button.is-discord {
+    color: $dark-text;
+  }
+
+  .navbar .button.is-github {
+    color: $dark-text;
+  }
+
+  .content table:not(.is-bordered) {
+    td, th {
+      border: 0;
+    }
+
+    th {
+      border-bottom: 1px solid $dark-border;
+    }
+  }
+
+  body {
+    color: $dark-text;
+  }
+
+  code {
+    color: $dark-code-red;
+  }
+
+  a {
+    color: $dark-link;
+  }
+
+  pre {
+    background: $dark-code-background;
+  }
+
+  :not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: $dark-code-background;
+  }
+}

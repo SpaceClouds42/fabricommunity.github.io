@@ -1,0 +1,41 @@
+/** Icon-text alignment **/
+
+.icon-text {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.icon-text span {
+  align-items: baseline;
+  display: inline-flex;
+}
+
+.icon-text span.icon {
+  align-items: center;
+}
+
+.button .icon-text span:not(.icon) {
+  padding-left: 0;
+}
+
+.icon-text .is-pulled-right {
+  align-items: flex-end !important;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.icon-text span ~ span {
+  padding-left: 10px;
+}
+
+/** Icons **/
+
+.icon.is-discord {
+  color: #7489DA;
+}
+
+.icon.is-twitter {
+  color: #1DA1F2;
+}

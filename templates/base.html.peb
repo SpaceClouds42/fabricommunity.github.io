@@ -6,19 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/static/css/bulma.min.css">
-    <link rel="stylesheet" href="/static/css/bulma-divider.min.css">
-    <link rel="stylesheet" href="/static/css/prism.css">
-    <link rel="stylesheet" href="/static/css/core.css">
-
-    {# Syntax Highlighting: Prism #}
-    <script async type="application/javascript" src="/static/js/prism.min.js"></script>
-
     {# Icons: Font Awesome Pro #}
-    <script src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
+    <script async src="https://kit.fontawesome.com/543fca7ffd.js" crossorigin="anonymous"></script>
 
     {# Emoji: Twemoji #}
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script async src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
+    {# Combined CSS & JS #}
+    <script async type="application/javascript" src="/static/js/index.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
 
     {% block head %}{% endblock %}
 </head>

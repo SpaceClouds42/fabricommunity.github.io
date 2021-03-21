@@ -1,0 +1,31 @@
+.navbar .button.is-discord {
+  background: none;
+  color: black;
+  border: none;
+}
+
+.navbar .button.is-discord:hover {
+  background-color: rgba(116, 137, 218, 0.1);
+  color: #7489DA; /* Blurple */
+}
+
+.navbar .button.is-github {
+  background: none;
+  color: black;
+  border: none;
+}
+
+.navbar .button.is-github:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar .button.is-twitter {
+  background: none;
+  color: black;
+  border: none;
+}
+
+.navbar .button.is-twitter:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+  color: #1DA1F2; /* Twitter Blue */
+}

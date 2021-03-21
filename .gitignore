@@ -75,3 +75,5 @@ fabric.properties
 ### Custom ignores
 build/
 SSG.jar
+
+node_modules/

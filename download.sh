@@ -1,3 +1,4 @@
+#!/bin/sh
 rm -f SSG.jar 2> /dev/null
 
 echo "Downloading the static site generator..."

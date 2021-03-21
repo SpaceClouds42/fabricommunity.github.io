@@ -2,11 +2,6 @@
 
 {% block title %}{{ meta.title }}{% endblock %}
 
-{% block head %}
-    {# Mobile sidebar JavaScript #}
-    <script async src="/static/js/sidebar.js" type="application/javascript"></script>
-{% endblock %}
-
 {% block main %}
 <body class="line-numbers has-navbar-fixed-top">
     <aside class="sidebar" id="sidebar">

@@ -45,6 +45,8 @@ The first thing you'll need to do is learn how to build and test the site. To ma
 number of simple scripts for you to make use of, for Linux, macOS and Windows.
 
 * `build.bat`/`build.sh` - Build the site and copy the built files into a single directory
+* `build-assets.bat`/`build-assets.sh` - For designers with `node` and `npm` installed, build the site's CSS and JS
+  files and copy it to the right place
 * `download.bat`/`download.sh` - Download the latest version of the static site generator
 * `serve.bat`/`serve.sh` - Run a simple web server, so you can test the site easily
 

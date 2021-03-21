@@ -20,11 +20,16 @@ jobs:
         with:
           java-version: 1.14
 
-      - name: List files
-        run: ls
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
 
-      - name: List templates
-        run: ls templates/**/*
+      - name: Install Node packages
+        run: npm install
+
+      - name: Build Assets
+        run: sh ./build-assets.sh
 
       - name: Build site
         run: sh ./build.sh
