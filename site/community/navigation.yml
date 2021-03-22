@@ -22,7 +22,7 @@ nodes:
 
   - type: "node"
 
-    title: "Moderation Policy"
+    title: "Moderation Guidelines"
     path: "/community/moderation"
     icon: "fas fa-gavel"
 

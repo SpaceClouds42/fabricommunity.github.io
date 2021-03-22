@@ -1,3 +1,5 @@
+@import "variables";
+
 h1, h2, h3, h4, h5, h6 {
   a {
     color: unset;
@@ -13,4 +15,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   font-weight: bold;
   padding: 0;
+}
+
+.has-text-modertater {
+  color: $modertater-role;
+}
+
+.has-text-smp-admin {
+  color: $smp-admin-role;
 }

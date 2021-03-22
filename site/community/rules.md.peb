@@ -145,9 +145,9 @@ emoji, advertising sketchy or NSFW websites, or hateful sentiment.
 
 ### Reporting
 
-To report rule-breaking behaviour in public, mention the **@Moderator**{ .has-text-info } role directly in the channel,
-and a staff member will be along as soon as they can be. Alternatively, you can send a private message directly to any
-staff member.
+To report rule-breaking behaviour in public, mention the **@Modertater**{ .has-text-modertater } role directly in the
+channel, and a staff member will be along as soon as they can be. Alternatively, you can send a private message
+directly to any staff member.
 
 If your report concerns a member of staff, please send a private message directly to **a different member of staff**.
 All private reports will be treated with confidentiality.
@@ -176,6 +176,6 @@ it's impossible to enumerate every possible situation (and some situations will 
 our best to explain how we come to a decision, and what we expect from our staff team.
 
 For more information on this, feel free to read
-[our moderation policy](/community/moderation). If you have any feedback on this document, feel free to contact us!
+[our moderation guidelines](/community/moderation). If you have any feedback on this document, feel free to contact us!
     {% endcolumn %}
 {% endcolumns %}

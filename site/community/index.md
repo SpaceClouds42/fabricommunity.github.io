@@ -13,10 +13,13 @@ We believe that a community should exist to serve the needs of its users. To tha
 
 * Be transparent about moderation actions in public
 * Clearly document our policies and explain what we expect of our users
-* Educate ourselves on threats to vulnerable groups, and use that education to take a stand against bigotry and harmful 
-  speech
+* Educate ourselves on threats to vulnerable groups, and use that education to take a stand against bigotry and other
+  harmful speech
 * Get our users involved with important decisions and changes to the community
 * Gracefully accept feedback from our users and work directly with the community to implement changes based upon it
+
+For more information on what we do here and how you can help, please take a look at the documents in the menu on the
+left side of the page.
 
 **Note:** This site is a living, breathing form of documentation. It will change over time as we encounter new 
 challenges and attempt to overcome them. We're always interested in feedback, so feel free to chat with us in
