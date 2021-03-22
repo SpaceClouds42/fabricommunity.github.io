@@ -90,3 +90,6 @@ nodes:
         title: "Templating & Design"
         path: "/community/editing/templates"
         icon: "fas fa-ruler-triangle"
+
+  - type: "spacer"
+    title: "Policy Proposals"

@@ -2,7 +2,20 @@
 title: "Proposal: Initial Policy"
 ---
 
+{% import "inline/macros" %}
+
 # Proposal: Initial Policy
+
+{{ tag(
+    "Created: March 2021",
+    size="medium",
+    rounded=true
+) }} {{ tag(
+    "Status: Proposed",
+    size="medium",
+    style="info",
+    rounded=true
+) }}
 
 This proposal is the first version of our community policies and guidelines, and it marks the first time we've
 started a policy proposal for public comment.
