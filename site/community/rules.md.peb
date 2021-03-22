@@ -1,0 +1,181 @@
+---
+title: Rules
+---
+
+# Rules
+
+We expect everyone that makes use of all Fabric Community spaces to adhere to the following rules. If you have any
+questions or suggestions, please feel free to contact a member of staff on Discord or ask your question in the
+`#discord-meta` channel.
+
+**Remember:** Ignorance of our rules is not an excuse for breaking them. You are responsible for educating yourself on
+how every community you join expects you to behave, and "I didn't know that was in the rules" will not fly with us.
+
+{% columns %}
+    {% column "is-half" %}
+#### **1)**{ .has-text-success } Follow Discord's Rules
+
+As we're a Discord-based community, everyone must follow the Discord
+[Community Guidelines](https://discord.com/guidelines) and [Terms of Service](https://discord.com/terms).
+    {% endcolumn %}
+    {% column "is-half" %}
+#### **2)**{ .has-text-success } Follow our Code of Conduct
+
+Make sure you read and follow [our Code of Conduct](/community/code-of-conduct), which outlines what we expect from you
+and is the basis for these rules.
+    {% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+    {% column "is-half" %}
+#### **3)**{ .has-text-success } Try to speak English
+
+The world is a big place, and many people will have a different native language. The common language in our community is
+English, but we appreciate that not everyone speaks English at the same level.
+
+If you're not a native English speaker, please try to speak English to the best of your ability. Don't worry if you need
+to use a translation tool, or if your English isn't great - we won't make fun of you, and we'll help you figure out the
+right words if you get stuck.
+    {% endcolumn %}
+    {% column "is-half" %}
+#### **4)**{ .has-text-success } Treat everyone with patience & respect
+
+Treat other people how you wish to be treated. If you would not be happy to be treated a certain way, do not treat
+other users that way.
+
+Everyone has a different background, and we expect you to respect that fact. We will not tolerate hateful, abusive or
+discriminatory behaviour in our community. Additionally, please try to be understanding of other users when reading
+their messages - not everyone communicates in the same way or with the same understanding of English, and some users
+may be suffering from disabilities that affect the way they talk.
+    {% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+    {% column "is-half" %}
+#### **5)**{ .has-text-success } Listen to & respect all staff members
+
+The staff team is here to support the community, keep it running smoothly, and ensure that it remains safe and friendly.
+In order to allow us to do our jobs, we need you to cooperate with us.
+
+Essentially, please take requests from staff members seriously and listen when a staff member asks you to do something.
+If you have a problem with what a staff member is asking you to do, we advise that you step away from the situation and
+send a private message to another staff member.
+    {% endcolumn %}
+    {% column "is-half" %}
+#### **6)**{ .has-text-success } Keep all projects legal & appropriate
+
+If you need help with a project, you will not be provided with it if your project may break laws, breach a Terms of
+Service or EULA (belonging to any organisation, not just Discord), or be considered malicious or inappropriate.
+
+Additionally, keep your code appropriate. Do not sexualize your code or use any slurs or other forms of derogatory
+language, either in the code itself or in the assets or filenames that make up your project.
+    {% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+    {% column "is-half" %}
+#### **7)**{ .has-text-success } Don't spam, or advertise outside the showcase channels
+
+We provide a number of channels for showcasing and informing users about your Fabric-related projects. Outside these
+channels, we will not tolerate advertising or any other form of spam. In particular, posting large numbers of images or
+lines of text together can be particularly disruptive, and we'd prefer you make use of a pastebin site or image
+uploading site when sharing a lot of text or images.
+
+We may remove links to other Discord servers, communities and projects at our discretion if we feel like they've been
+posted inappropriately, rather than to start or contribute to a discussion.
+    {% endcolumn %}
+    {% column "is-half" %}
+#### **8)**{ .has-text-success } Follow the given channel topic, and don't derail a discussion
+
+Most of our channels are strictly on-topic, and we expect our users to take note of a channel's topic and stick to it.
+We understand that conversations may span multiple topics and move onto something else, but we may ask you to move if
+a conversation leaves the scope of a channel's topic.
+
+Additionally, when entering a channel with an active discussion, please be mindful of that discussion and do not try to
+derail it - by talking over it, for example. We have multiple general (off-topic) channels you can use if a channel is
+busy.
+    {% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+    {% column "is-half" %}
+#### **9)**{ .has-text-success } Keep non-free mappings out of the public channels
+
+Do not mention names from MCP, Mojang or other proprietary mappings outside the `#mod-dev-alt` channel. If you wish to
+talk about proprietary mappings (or working with them), you can gain access to this channel by using the `-mcp` command
+in the `#bot-commands` channel.
+    {% endcolumn %}
+    {% column "is-half" %}
+#### **10)**{ .has-text-success } Be your best self
+
+At the end of the day, everyone is here to be themselves in a safe community - to talk about Fabric, or other topics.
+We ask that everyone try to exercise empathy and understanding when interacting with other community members, and, if
+possible, to step away when things get heated.
+
+We all have a responsibility to build the community we'd like to be in, and that starts with thinking about how you
+behave here. Together, we can build a safe, inclusive and friendly space for everyone.
+    {% endcolumn %}
+{% endcolumns %}
+
+---
+
+{% columns %}
+    {% column "is-half" %}
+### Non-message mediums
+
+Do not change your avatar, nickname, username or custom/rich status to try to protest a moderation action, or to attack
+any user.
+
+#### Nicknames
+
+All nicknames must adhere to the rules above. Additionally, they should not be hard to read or too noisy. Nicknames
+may be considered difficult to read or noisy if they contain emojis, Zalgo or other difficult-to-read styling, or
+Unicode control characters. "Empty" nicknames are also considered difficult to read.
+
+#### Avatars
+
+All avatars must adhere to the rules above. Additionally, avatars depicting objectionable or NSFW (Not Safe For Work)
+content are disallowed, as well as avatars that appear to be "blank" by blending in with the background of the Discord
+client.
+
+#### Custom/Rich Statuses
+
+All user statuses must adhere to the rules above. In particular, we don't want to see objectionable or NSFW custom
+emoji, advertising sketchy or NSFW websites, or hateful sentiment.
+
+### Reporting
+
+To report rule-breaking behaviour in public, mention the **@Moderator**{ .has-text-info } role directly in the channel,
+and a staff member will be along as soon as they can be. Alternatively, you can send a private message directly to any
+staff member.
+
+If your report concerns a member of staff, please send a private message directly to **a different member of staff**.
+All private reports will be treated with confidentiality.
+    {% endcolumn %}
+    {% column "is-half" %}
+### Enforcement
+
+Our staff team have multiple tools at their disposal when dealing with rule-breakers, including the following:
+
+* Verbally/textually warning or correcting users
+* Forcibly changing a user's nickname
+* Temporarily muting users
+* Temporarily or permanently removing users from the community (kicking, tempbanning, banning)
+
+Each situation is unique, and will be assessed on a case-by-case basis. All actions taken in response to rule-breaking
+behaviour is done at the discretion of the moderator in question - however, we will take feedback from community members
+if they're not happy with how things were resolved.
+
+We do not currently have a way to appeal community bans. While we're figuring that out, feel free to add `gdude#2002` as
+a friend and send your appeal in a private message.
+
+#### Moderation Guidelines
+
+Moderation is a complicated subject at best, and it requires a lot of nuance and difficult decision-making. While
+it's impossible to enumerate every possible situation (and some situations will not suit our documentation), we've done
+our best to explain how we come to a decision, and what we expect from our staff team.
+
+For more information on this, feel free to read
+[our moderation policy](/community/moderation). If you have any feedback on this document, feel free to contact us!
+    {% endcolumn %}
+{% endcolumns %}
