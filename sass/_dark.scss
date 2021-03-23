@@ -23,6 +23,11 @@
     }
   }
 
+  .hero.is-light {
+    background-color: $dark-background-panel;
+    color: $dark-text;
+  }
+
   .navbar.is-light {
     background-color: $dark-background-panel;
     color: $dark-text;
@@ -39,6 +44,10 @@
   .navbar .button.is-github {
     color: $dark-text;
   }
+
+  .navbar .button.is-twitter {
+    color: $dark-text;
+   }
 
   .content table:not(.is-bordered) {
     td, th {
