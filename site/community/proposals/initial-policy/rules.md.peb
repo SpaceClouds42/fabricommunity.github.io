@@ -106,7 +106,19 @@ talk about proprietary mappings (or working with them), you can gain access to t
 in the `#bot-commands` channel.
     {% endcolumn %}
     {% column "is-half" %}
-#### **10)**{ .has-text-success } Be your best self
+#### **10)**{ .has-text-success } Don't import drama or controversy from other communities
+
+We aim to be a safe place for people that have been marginalised from less-inclusive spaces that exist in the
+wider Fabric community. In order to do this, we need to allow people to interact without having to worry about the
+controversies that marginalised them - so discussion relating to those controversies is not welcome in our spaces.
+
+This includes the numerous controversies that have unfolded at the official Discord community for the Fabric project.
+    {% endcolumn %}
+{% endcolumns %}
+
+{% columns %}
+    {% column %}
+#### **11)**{ .has-text-success } Be your best self
 
 At the end of the day, everyone is here to be themselves in a safe community - to talk about Fabric, or other topics.
 We ask that everyone try to exercise empathy and understanding when interacting with other community members, and, if
