@@ -26,7 +26,16 @@
   .hero.is-light {
     background-color: $dark-background-panel;
     color: $dark-text;
+
+    .title {
+      color: $dark-text;
+    }
+
+    .subtitle {
+      color: $dark-text;
+    }
   }
+
 
   .navbar.is-light {
     background-color: $dark-background-panel;

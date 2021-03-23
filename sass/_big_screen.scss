@@ -1,23 +1,24 @@
 @media(min-width: 2000px) {
-  body {
-    font-size: 1.5rem;
-  }
-
-  .sidebar {
-    padding: 1.5rem;
-    width: 30rem;
-  }
+  //body {
+  //  font-size: 1.5rem;
+  //}
+  //
+  //.sidebar {
+  //  padding: 1.5rem;
+  //  width: 30rem;
+  //}
 
   .has-sidebar {
-    margin-left: 30rem;
+    margin-left: 20rem;
+    margin-right: 30%;
   }
 
-  .has-sidebar > section.section {
-    padding-top: 2rem;
-    padding-left: 2rem;
-  }
-
-  .navbar.is-fixed-top {
-    padding-left: 30rem;
-  }
+  //.has-sidebar > section.section {
+  //  padding-top: 2rem;
+  //  padding-left: 2rem;
+  //}
+  //
+  //.navbar.is-fixed-top {
+  //  padding-left: 30rem;
+  //}
 }
