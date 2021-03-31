@@ -10,46 +10,21 @@ nodes:
 
   - type: "node"
 
-    title: "Proposal 1: Inital Policy"
-    path: "/community/proposals/initial-policy"
-    icon: "fas fa-clipboard"
+    title: "Rules"
+    path: "/community/rules"
+    icon: "fas fa-book"
 
-    children:
-      - type: "node"
+  - type: "node"
 
-        title: "Rules"
-        path: "/community/proposals/initial-policy/rules"
-        icon: "fas fa-book"
+    title: "Code of Conduct"
+    path: "/community/code-of-conduct"
+    icon: "fas fa-scroll"
 
-      - type: "node"
+  - type: "node"
 
-        title: "Code of Conduct"
-        path: "/community/proposals/initial-policy/code-of-conduct"
-        icon: "fas fa-scroll"
-
-      - type: "node"
-
-        title: "Moderation Guidelines"
-        path: "/community/proposals/initial-policy/moderation"
-        icon: "fas fa-gavel"
-
-#  - type: "node"
-#
-#    title: "Rules"
-#    path: "/community/rules"
-#    icon: "fas fa-book"
-#
-#  - type: "node"
-#
-#    title: "Code of Conduct"
-#    path: "/community/code-of-conduct"
-#    icon: "fas fa-scroll"
-#
-#  - type: "node"
-#
-#    title: "Moderation Guidelines"
-#    path: "/community/moderation"
-#    icon: "fas fa-gavel"
+    title: "Moderation Guidelines"
+    path: "/community/moderation"
+    icon: "fas fa-gavel"
 
   - type: "spacer"
     title: "Contributing"
@@ -93,3 +68,28 @@ nodes:
 
   - type: "spacer"
     title: "Policy Proposals"
+
+  - type: "node"
+
+    title: "Proposal 1: Inital Policy"
+    path: "/community/proposals/initial-policy"
+    icon: "fas fa-clipboard has-text-success"
+
+    children:
+      - type: "node"
+
+        title: "Rules"
+        path: "/community/proposals/initial-policy/rules"
+        icon: "fas fa-book"
+
+      - type: "node"
+
+        title: "Code of Conduct"
+        path: "/community/proposals/initial-policy/code-of-conduct"
+        icon: "fas fa-scroll"
+
+      - type: "node"
+
+        title: "Moderation Guidelines"
+        path: "/community/proposals/initial-policy/moderation"
+        icon: "fas fa-gavel"
