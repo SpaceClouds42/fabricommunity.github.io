@@ -4,6 +4,9 @@ title: Moderation Guidelines
 
 # Moderation Guidelines
 
+All of our staff members are currently involved with moderation - the term `moderator` is used below in case that
+changes in the future.
+
 This document outlines a basic idea of what's expected of our moderators, and provides some advice for moderators that
 may be in a pinch. For the sake of transparency, this is a public document - if you have suggestions or feedback,
 please feel free to contact us (either directly or in `#discord-meta`).
@@ -37,17 +40,12 @@ for the sake of banning a few trolls.
 
 ## Our Hierarchy
 
-We operate a relatively flat hierarchy, where all staff members have access to the same permissions and tools. However,
-we do differentiate between two types of staff member:
+We operate a flat hierarchy, where all staff members have access to the same permissions and tools. There is one
+staff role: **Administater**{ .has-text-admin }.
 
-* **Modertaters**{ .has-text-modertater } are primarily Discord moderators, and they're the people you go to first when
-  there's a problem on Discord
-* **SMP Admins**{ .has-text-smp-admin } are primarily concerned with maintaining our Minecraft SMP server, taking care
-  of day-to-day tasks there
-
-Both staff roles are similar and both handle moderation tasks, but the **SMP Admins**{ .has-text-smp-admin } are in
-charge of managing the SMP server - **Modertaters**{ .has-text-modertater } will largely be unable to help you with
-ingame issues.
+**Administaters**{ .has-text-admin } are involved with the day-to-day running of our community, and also handle
+moderation tasks. This is a flat role that doesn't describe the specific focus of a staff member - but everyone deals
+with moderation, so our bases should be covered regardless of who is available.
 
 ## Moderator Responsibilities
 
