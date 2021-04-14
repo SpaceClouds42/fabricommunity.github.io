@@ -12,15 +12,19 @@ To play Minecraft with Fabric mods, you'll first need to install Fabric.
 ***
 1. Download the Fabric installer from [below](#download-fabric-installer-v).
 1. Open the installer.
-    - You can change the directory for the profile by changing the install location, it should default to your `.minecraft/` folder.
+   <br>
+    You can change the directory for the profile by changing the install location, it should default to your `.minecraft/` folder.
 
    [![Installer](/static/images/using/installing/open-installer.png)](/static/images/using/installing/open-installer.png)
 
 1. Select the desired MC version.
-    - It defaults to the latest stable release; to choose a snapshot version, click show snapshots
+   <br>
+    It defaults to the latest stable release; to choose a snapshot version, click show snapshots.
 
       [![Show Snapshots](/static/images/using/installing/show-snapshots.png)](/static/images/using/installing/show-snapshots.png)
-1. Click `install`. A pop-up will appear once it has completed installing.
+1. Click `install`.
+   <br>
+    A pop-up will appear once it has completed installing.
 
    [![Install Success Message](/static/images/using/installing/client-install-complete.png)](/static/images/using/installing/client-install-complete.png)
 
