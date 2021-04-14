@@ -16,6 +16,7 @@
 
             <section id="main-content" class="content section">
                 {{ body | raw }}
+
                 <footer>
                     <hr />
 
