@@ -38,8 +38,25 @@ Another very useful mod to have is [Mod Menu](https://modrinth.com/mod/modmenu).
 
 ## MultiMC
 ***
-coming soon:tm:
+It is much simpler to install Fabric using the [MultiMC Launcher](https://multimc.org/#Download) and it is the more recommended installation due to its many features including modpack support.
 
+1. Press the `Add Instance` button on the upper left-hand corner of the window
+
+   [![Add Instance Button](/static/images/using/installing/add-instance.png)](/static/images/using/installing/add-instance.png)
+
+1. Select the desired MC version and create the instance
+
+1. Edit your newly created instance
+
+   [![Edit Instance](/static/images/using/installing/edit-instance.png)](/static/images/using/installing/edit-instance.png)
+
+1. On the right-hand side, select `Install Fabric`
+
+   A pop-up should appear asking you to select the fabric-loader version. You can simply press `OK` and use the one selected by default, which will be the latest available
+
+That's it! You can now launch this instance to play Fabric. To add mods, edit the instance and select `Loader Mods` on the left-hand sidebar. From there, you can add, remove, and temporarily enable/disable mods.
+
+Most mods require the [Fabric API](https://modrinth.com/mod/fabric-api), so it's best to add that to your instance. Another very useful mod to have is [Mod Menu](https://modrinth.com/mod/modmenu). It allows you to access many mods' config menus, and it gives you a complete list of all currently loaded mods.
 
 ### Download Fabric Installer v‎{ .installer-version }
 
