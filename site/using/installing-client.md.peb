@@ -1,0 +1,53 @@
+---
+title: Installing Fabric
+---
+
+{% import "inline/macros" %}
+
+# Installing Fabric
+
+To play Minecraft with Fabric mods, you'll first need to install Fabric.
+
+## Standard Launcher
+***
+1. Download the Fabric installer from [below](#download-fabric-installer-v).
+1. Open the installer.
+    - You can change the directory for the profile by changing the install location, it should default to your `.minecraft/` folder.
+
+   [![Installer](/static/images/using/installing/open-installer.png)](/static/images/using/installing/open-installer.png)
+
+1. Select the desired MC version.
+    - It defaults to the latest stable release; to choose a snapshot version, click show snapshots
+
+      [![Show Snapshots](/static/images/using/installing/show-snapshots.png)](/static/images/using/installing/show-snapshots.png)
+1. Click `install`. A pop-up will appear once it has completed installing.
+
+   [![Install Success Message](/static/images/using/installing/client-install-complete.png)](/static/images/using/installing/client-install-complete.png)
+
+You have now installed the Fabric mod loader! If you open up the Minecraft launcher, there will be a newly created version called `fabric-loader-<mcversion>`. You can now run this installation to play with Fabric mods.
+
+   [![Fabric Installation](/static/images/using/installing/installation-standard.png)](/static/images/using/installing/installation-standard.png)
+
+Most mods require the [Fabric API](https://modrinth.com/mod/fabric-api), so it's best to add that to your `.minecraft/mods/` folder.
+
+Another very useful mod to have is [Mod Menu](https://modrinth.com/mod/modmenu). It allows you to access many mods' config menus, and it gives you a complete list of all currently loaded mods.
+
+## MultiMC
+***
+coming soon:tm:
+
+
+### Download Fabric Installer v‎{ .installer-version }
+
+{{ button(
+    "href",
+    "Universal Installer (jar)",
+    classes="is-info installer-url",
+    icon_name="fab fa-java fa-lg"
+) }}
+{{ button(
+    "href",
+    "Windows Installer (exe)",
+    classes="is-info installer-url-exe",
+    icon_name="fas fa-file-download"
+) }}

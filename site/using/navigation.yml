@@ -13,3 +13,18 @@ nodes:
     title: "Uploading a log file"
     path: "/using/logs"
     icon: "fas fa-file"
+
+  - type: "spacer"
+    title: "Installing Fabric"
+
+  - type: "node"
+
+    title: "Client"
+    path: "/using/installing-client"
+    icon: "fas fa-download"
+
+  - type: "node"
+
+    title: "Server"
+    path: "/using/installing-server"
+    icon: "fas fa-server"

@@ -25,5 +25,49 @@
 
         twemoji.parse(mainElement)
     </script>
+
+    <script>
+        // Taken from https://stackoverflow.com/a/35970894
+        function getJSON(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function () {
+                var status = xhr.status;
+                if (status === 200) {
+                    callback(xhr.response);
+                } else {
+                    console.log('Something went wrong: ' + status);
+                }
+            };
+            xhr.send();
+        };
+
+        // Taken from https://stackoverflow.com/a/17606289
+        String.prototype.replaceAll = function (search, replacement) {
+            var target = this;
+            return target.replace(new RegExp(search, 'g'), replacement);
+        };
+
+        window.onLoad = getJSON("https://meta.fabricmc.net/v2/versions/installer", function (data) {
+            var installer_urlElements = document.getElementsByClassName("installer-url");
+            for (i in installer_urlElements) {
+                var e = installer_urlElements[i];
+                try { e.setAttribute("href", data[0].url); } catch (err) { }
+            }
+
+            var installer_url_exeElements = document.getElementsByClassName("installer-url-exe");
+            for (i in installer_url_exeElements) {
+                var e = installer_url_exeElements[i];
+                try { e.setAttribute("href", data[0].url.replace("jar", "exe")); } catch (err) { }
+            }
+
+            var installer_versionElements = document.getElementsByClassName("installer-version");
+            for (i in installer_versionElements) {
+                var e = installer_versionElements[i];
+                try { e.innerHTML = e.innerHTML.replaceAll("‎", data[0].version); } catch (err) { }
+            }
+        });
+    </script>
 </body>
 {% endblock %}
