@@ -63,16 +63,16 @@ Most mods require the [Fabric API](https://modrinth.com/mod/fabric-api), so it's
 If you love doing stuff from the command line, don't worry, it's simple to install from there, too.
 
 1. Download the Fabric installer
-```shell
-curl https://maven.fabricmc.net/net/fabricmc/fabric-installer/‎/fabric-installer-‎.jar
-```
-{ .installer-version }
+    ```shell
+    curl https://maven.fabricmc.net/net/fabricmc/fabric-installer/‎/fabric-installer-‎.jar
+    ```
+    { .installer-version }
 
 1. Run the installer
-```shell
-java -jar fabric-installer-‎.jar client -dir "~/.minecraft"
-```
-{ .installer-version }
+    ```shell
+    java -jar fabric-installer-‎.jar client -dir "~/.minecraft"
+    ```
+    { .installer-version }
 
 If you want to use a version other than the latest stable release, you can add the `-mcversion` parameter followed by the version
 
@@ -85,7 +85,7 @@ java -jar fabric-installer-‎.jar client -dir "~/.minecraft" -mcversion 21w15a"
 
 
 ### Download Fabric Installer v‎{ .installer-version }
-
+***
 {{ button(
     "href",
     "Universal Installer (jar)",
