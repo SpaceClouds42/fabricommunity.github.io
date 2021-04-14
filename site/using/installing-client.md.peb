@@ -58,6 +58,32 @@ That's it! You can now launch this instance to play Fabric. To add mods, edit th
 
 Most mods require the [Fabric API](https://modrinth.com/mod/fabric-api), so it's best to add that to your instance. Another very useful mod to have is [Mod Menu](https://modrinth.com/mod/modmenu). It allows you to access many mods' config menus, and it gives you a complete list of all currently loaded mods.
 
+## CLI Install
+***
+If you love doing stuff from the command line, don't worry, it's simple to install from there, too.
+
+1. Download the Fabric installer
+```shell
+curl https://maven.fabricmc.net/net/fabricmc/fabric-installer/‎/fabric-installer-‎.jar
+```
+{ .installer-version }
+
+1. Run the installer
+```shell
+java -jar fabric-installer-‎.jar client -dir "~/.minecraft"
+```
+{ .installer-version }
+
+If you want to use a version other than the latest stable release, you can add the `-mcversion` parameter followed by the version
+
+Example: Installing version 21w15a
+```shell
+java -jar fabric-installer-‎.jar client -dir "~/.minecraft" -mcversion 21w15a"
+```
+{ .installer-version }
+
+
+
 ### Download Fabric Installer v‎{ .installer-version }
 
 {{ button(
