@@ -11,7 +11,9 @@ if (isWindows) {
     Runtime.getRuntime().exec("cmd /c start \"\" build-assets.bat").waitFor()
 
     println("Running server...")
-    Runtime.getRuntime().exec("cmd /c start \"\" serve.bat").waitFor()
+    val serve = Runtime.getRuntime().exec("cmd /c start \"\" serve.bat")
+    println("Server Online at http://localhost:8080/")
+    serve.waitFor()
 } else {
     println("Generating pages...")
     Runtime.getRuntime().exec("./build.sh").waitFor()
